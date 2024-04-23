@@ -1,0 +1,262 @@
+<template>
+
+<div id="conteneur">
+
+        <section id="welcome-section">
+
+          <header class=spaceheader>
+    
+    <nav id="main-nav">
+
+      <div>
+        <RouterLink to="/Accueil"> <img id="logo" alt="Revy logo" src="../assets/logo-blanc.png"></RouterLink>
+      </div>
+
+      <div id="nav-items">
+        <RouterLink to="/MeilleurYv" active-class="active-link"> Meilleur d’Yverdon</RouterLink>
+        <RouterLink to="/BienEtre" active-class="active-link"> Bien vivre</RouterLink>
+
+      </div>
+
+    </nav>
+  </header>
+
+          <div id=textentre>
+            
+            <h1>Bienvenue à Yverdon</h1>
+
+            <p>Yverdon-les-Bains est une ville suisse située dans le canton de Vaud, au bord du lac de Neuchâtel.</p>
+
+           
+
+            <div id="buttons">
+               
+            </div>
+
+          </div>
+        </section>
+
+  <SectionOne></SectionOne>
+
+  <PresentTindr></PresentTindr>
+
+<MicrotrotComponent></MicrotrotComponent>
+
+
+
+</div>
+
+<RevyFooter></RevyFooter>
+</template>
+
+<script>
+
+import PresentTindr from '../components/Accueil/PresentTindr.vue'
+import SectionOne from '../components/Accueil/SectionOne.vue'
+import MicrotrotComponent from '../components/Accueil/MicrotrotComponent.vue'
+import RevyFooter from '../components/RevyFooter.vue'
+export default {
+  name: 'HomeView',
+  components: {
+    PresentTindr,
+    SectionOne,
+    MicrotrotComponent,
+    RevyFooter
+  },
+  props: {
+        showNavBar: {
+          type: Boolean,
+          default: true,
+          required: false
+        }
+    },
+    mounted() {
+    this.$emit('update:showNavBar', false);
+
+  },
+  unmounted() {
+    this.$emit('update:showNavBar', true);
+  },
+ 
+
+}
+</script>
+
+
+<style scoped>
+
+
+#conteneur{
+
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  overflow: hidden;
+  background-color: #F4F0E9;
+  background-image: url('@/assets/Accueil/lignetrajet.png');
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.spaceheader {
+  width: 93vw;
+    display: flex;
+      flex-direction: row;
+    position: absolute;
+    left: 3vw;
+    top:3vh;
+  
+  padding: 0;
+  margin:0px;
+
+  background-color: #ffffff00;
+  /* box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.05); */
+  z-index: 1000;
+}
+
+
+#nav-items a {
+  color: white;
+  font-weight: 380;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding:15px;
+
+}
+#main-nav {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: space-between;
+    width: 90vw;
+    background-color: #ffffff00;
+    padding: 15px;
+}
+
+
+#nav-items {
+  width: fit-content;
+  padding: 0;
+  justify-content: space-between;
+}
+
+
+
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    background: url('@/assets/Accueil/landingimg2.png') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    background-color: rgb(162, 199, 223);
+    text-shadow: 1px 1px 3px #00000064;
+}
+
+#welcome-section div {
+    text-align: left;
+}
+
+
+#textentre {
+  position: relative;
+  bottom: 18vh;
+left: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  align-content: center;
+
+  padding: 15px;
+
+    text-align: center;
+    font-family: 'helvetica', sans-serif;
+    color: #ffffff;
+    max-width: 800px;
+
+    margin: 15px;
+}
+
+#textentre h1 {
+    font-size: 4em;
+  
+}
+
+#textentre p {
+    font-size: 1.2em;
+    max-width: 550px;
+ 
+}
+#textentre p, #textentre h1{
+  
+  margin:10px;
+}
+
+
+#buttons {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+      margin-top: 50px;
+    width: fit-content;
+    max-width: 90%;
+
+}
+button {
+        padding: 1.3em 3em;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: #000;
+        background-color: #fff;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+        margin-right: 5%;
+      }
+
+#Mybutton:hover {
+        background-color: #87ceb2;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+      }
+      
+      #Mybutton:active {
+        transform: translateY(-1px);
+      }
+
+button:hover {
+  background-color: #6b92d4;
+  box-shadow: 0px 15px 20px rgba(188, 220, 225, 0.4);
+  color: #fff;
+  font-weight: 600;
+  transform: translateY(-7px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+
+
+
+
+
+
+</style>
