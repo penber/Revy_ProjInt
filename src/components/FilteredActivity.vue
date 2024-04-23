@@ -59,6 +59,7 @@ export default {
       swipeRight: false,
     };
   },
+
   computed: {
     currentActivity() {
       let activitey = this.activities[this.currentActivityIndex];
@@ -66,10 +67,15 @@ export default {
       return activitey;
     }
   },
+
   methods: {
     likeActivity() {
+      let test = 0;
       this.swipeRight = true;
-      setTimeout(() => this.processActivity('like'), 500);
+      if(test===0){
+        setTimeout(() => this.processActivity('like'), 100);
+      }
+      test++;
         },
     dislikeActivity() {
       this.swipeLeft= true;

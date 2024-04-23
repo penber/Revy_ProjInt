@@ -1,38 +1,42 @@
 <template>
-  <section >
+    
 
-    <div id="nos-reseaux">
-        <h1>Ces activités sont faites pour vous !</h1>
+<div id="listedactivite">
 
+
+    <div id="filtres">
+
+<div class="filter-container">
+<div id="buttons">
+        <button 
+            class="filter-button" 
+            :class="{ 'active-filter': activeTags.includes('sport') }" 
+            @click="toggleTag('sport')">Sport</button>
+        <button 
+            class="filter-button" 
+            :class="{ 'active-filter': activeTags.includes('loisirs') }" 
+            @click="toggleTag('loisirs')">Sorties</button>
+        <button 
+            class="filter-button" 
+            :class="{ 'active-filter': activeTags.includes('culture') }" 
+            @click="toggleTag('culture')">Culture</button>
+        <button 
+            class="filter-button filter-clear" 
+            @click="clearFilters">Supprimer</button>
     </div>
-        
-          <div id="filtres">
+</div>   
+</div>
+   
 
-          <div class="filter-container">
-            <div id="buttons">
-                    <button 
-                        class="filter-button" 
-                        :class="{ 'active-filter': activeTags.includes('sport') }" 
-                        @click="toggleTag('sport')">Sport</button>
-                    <button 
-                        class="filter-button" 
-                        :class="{ 'active-filter': activeTags.includes('loisirs') }" 
-                        @click="toggleTag('loisirs')">Sorties</button>
-                    <button 
-                        class="filter-button" 
-                        :class="{ 'active-filter': activeTags.includes('culture') }" 
-                        @click="toggleTag('culture')">Culture</button>
-                    <button 
-                        class="filter-button filter-clear" 
-                        @click="clearFilters">Supprimer</button>
-                </div>
-          </div>   
-      </div>
-  </section>
-
-  <div id="listeact">
+<div id="listeact">
       <ActCard class="Onecard" v-for="data in filteredActivities" :key="data.name" :myData="data"/>
   </div>
+
+
+</div>
+
+
+ 
 </template>
 
 <script>
@@ -94,7 +98,20 @@ export default {
         max-width: 801px; 
         margin:0px;
     }
-
+    
+    #titrecarte{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       width: auto ;
+        height: auto;
+        margin: 5vh 0vh;
+        padding-left:50px;
+    }
+  
+    #titrecarte p{
+   width:80%;
+    }
    #filtres h1 {
         margin: 25px 0px;}
 
@@ -115,7 +132,17 @@ export default {
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée au survol */
     }
 
-
+#listedactivite{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color: #ffffff00;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.0);
+    margin-bottom: 50px;
+    padding:10px;
+}
 
     .filter-container{
         display: flex;
@@ -149,6 +176,7 @@ export default {
         display: flex;
         flex-direction: row;
         flex-wrap:wrap;
+        min-width: 80vw;
         max-width: 100vw;
         justify-content: space-around;
       }
@@ -195,7 +223,7 @@ button:active {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px;
     background-color: transparent;
@@ -205,6 +233,7 @@ button:active {
   
   .Onecard {
     flex: 1 1 22%;
+    justify-content: space-between;
     margin: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     min-width: 200px;

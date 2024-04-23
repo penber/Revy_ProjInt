@@ -1,20 +1,7 @@
 <template>
    
-    <header v-if="showNavBar">
-      <nav id="main-nav">
-        <div>
-          <RouterLink to="/Accueil"> <img id="logo" alt="Revy logo" src="./assets/logo-blanc.png"></RouterLink>
-        </div>
-        <div id="nav-items">
-          <RouterLink to="/MeilleurYv" active-class="active-link"> Meilleur d’Yverdon</RouterLink>
-          <RouterLink to="/CarteMap" active-class="active-link"> Carte</RouterLink>
-          <RouterLink to="/BienEtre" active-class="active-link"> Bien vivre</RouterLink>
-
-        </div>
-      </nav>
-    </header>
-    
-    <router-view  v-model:show-nav-bar.sync="showNavBar"/>
+ 
+    <router-view />
 
 </template>
 
@@ -90,11 +77,6 @@ export default {
 }
 
 
-#nav-items a:hover,
-#nav-items a:focus {
-    background-color: #b7e5ef25;
-    border-radius: 5px;
-}
 
 .hamburger-menu {
     background: none;

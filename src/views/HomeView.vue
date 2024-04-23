@@ -2,24 +2,9 @@
 
 <div id="conteneur">
 
+  <NavBarr :activeClass="'Accueil'"/>
+
         <section id="welcome-section">
-
-          <header class=spaceheader>
-    
-    <nav id="main-nav">
-
-      <div>
-        <RouterLink to="/Accueil"> <img id="logo" alt="Revy logo" src="../assets/logo-blanc.png"></RouterLink>
-      </div>
-
-      <div id="nav-items">
-        <RouterLink to="/MeilleurYv" active-class="active-link"> Meilleur d’Yverdon</RouterLink>
-        <RouterLink to="/BienEtre" active-class="active-link"> Bien vivre</RouterLink>
-
-      </div>
-
-    </nav>
-  </header>
 
           <div id=textentre>
             
@@ -55,21 +40,18 @@ import PresentTindr from '../components/Accueil/PresentTindr.vue'
 import SectionOne from '../components/Accueil/SectionOne.vue'
 import MicrotrotComponent from '../components/Accueil/MicrotrotComponent.vue'
 import RevyFooter from '../components/RevyFooter.vue'
+import '../assets/styles/global.css'; 
+import NavBarr from '@/components/NavBarr.vue';
 export default {
   name: 'HomeView',
   components: {
     PresentTindr,
     SectionOne,
     MicrotrotComponent,
-    RevyFooter
+    RevyFooter,
+    NavBarr
   },
-  props: {
-        showNavBar: {
-          type: Boolean,
-          default: true,
-          required: false
-        }
-    },
+  
     mounted() {
     this.$emit('update:showNavBar', false);
 
@@ -176,7 +158,6 @@ left: 2vh;
   padding: 15px;
 
     text-align: center;
-    font-family: 'helvetica', sans-serif;
     color: #ffffff;
     max-width: 800px;
 
@@ -184,11 +165,15 @@ left: 2vh;
 }
 
 #textentre h1 {
+  font-family: 'typotitre', sans-serif;
+
     font-size: 4em;
   
 }
 
 #textentre p {
+  font-family: 'typotexte', sans-serif;
+
     font-size: 1.2em;
     max-width: 550px;
  
@@ -226,24 +211,11 @@ button {
         margin-right: 5%;
       }
 
-#Mybutton:hover {
-        background-color: #87ceb2;
-        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-        color: #fff;
-        transform: translateY(-7px);
-      }
       
       #Mybutton:active {
         transform: translateY(-1px);
       }
 
-button:hover {
-  background-color: #6b92d4;
-  box-shadow: 0px 15px 20px rgba(188, 220, 225, 0.4);
-  color: #fff;
-  font-weight: 600;
-  transform: translateY(-7px);
-}
 
 button:active {
   transform: translateY(-1px);

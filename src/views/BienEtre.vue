@@ -148,13 +148,7 @@ export default {
             showresults: false,
         }
     },
-    props: {
-        showNavBar: {
-          type: Boolean,
-          default: true,
-          required: false
-        }
-    },
+  
 
   mounted() {
     this.$emit('update:showNavBar', false);

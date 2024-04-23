@@ -1,10 +1,46 @@
+@font-face {
+  font-family: 'typotitre';
+  src: url('~@/assets/fonts/OpenSauceSans/OpenSauceSans-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-size: 50px;
+}
 
+@font-face {
+  font-family: 'typotitre2';
+  src: url('~@/assets/fonts/OpenSauceSans/OpenSauceSans-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-size: 40px;
+}
+
+@font-face {
+  font-family: 'typotexte';
+  src: url('~@/assets/fonts/OpenSauceSans/OpenSauceSans-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-size: 40px;
+
+}
 
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+
+h1,h2,h3{
+  font-family: 'typotitre', sans-serif;
+}
+h4,h5,h6 {
+  font-family: 'typotitre2', sans-serif;
+}
+p {
+  font-family: 'typotexte', sans-serif;
 }
 
 #main-nav {
@@ -42,10 +78,11 @@ html, body {
         padding: 1.3em 3em;
         font-size: 12px;
         max-height: 50px;
+        align-content: center;
 min-width: fit-content;
         text-transform: uppercase;
         letter-spacing: 2.5px;
-        font-weight: 500;
+        font-weight: 600;
         color: #000;
         background-color: #fff;
         border: none;
@@ -54,13 +91,16 @@ min-width: fit-content;
         transition: all 0.3s ease 0s;
         cursor: pointer;
         outline: none;
+        transition: 0.5s;
+        text-decoration: none;
+
       }
 
       
       
         #Mybutton:hover {
           background-color: #abddc937;
-          box-shadow: 0px 15px 20px rgb(188, 220, 206);
+          box-shadow: 0px 15px 20px rgb(19, 171, 105);
           background-color: black;
           color: #fff;
           transform: translateY(-2px);

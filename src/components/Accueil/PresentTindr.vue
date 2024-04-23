@@ -7,15 +7,14 @@
 <div class="tindrrre">
 
   <div class="tindrr-text">
-    <h2>Quel activitée vous coorespond le mieux ?</h2>
+    <h2>Quels activitées vous coorespondent le mieux ?</h2>
 
-  <p> Trouve l'activité qui te cooresponde le mieux dans Yverdon-les-bains 
-    en effectuant un test ludique et rapide ! </p>
+  <p> Découvre quelle activité te correspond 
+    le mieux à Yverdon-les-Bains en faisant un test ludique et rapide ! </p>
 
   </div>
   
-    <button id="Mybutton">Commencer</button>
-
+    <router-link id="Mybutton" to="/MeilleurYv">Commencer</router-link>
 </div>
 
 <div class="tindrr-img">
@@ -54,7 +53,8 @@ export default {
   align-items:center;
   width: 100%;
   box-shadow: 0 0px 0px rgba(0,0,0,0.0);
-  margin-bottom: 50px; 
+  margin-bottom: 80px;
+  margin-top:80px; 
   }
 
   .tindrrre {
@@ -64,7 +64,7 @@ export default {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: left;
-    text-align: left;
+    text-align: center;
   }
 
   
@@ -76,11 +76,17 @@ export default {
     justify-content: left;
     align-items: left;
     text-align: left;
+    margin-bottom: 25px;
+  }
+
+  .tindrr-img img{
+    max-width: 65%;
   }
 
   .tindrr-text h2{
     font-size: 2.3em;
     margin: 0px;
+    width:80%;
   }
 
   .tindrr-text p{
@@ -92,6 +98,15 @@ export default {
   margin-top: 20px;
   width: fit-content;
 }
+
+.tindrr-img img{
+  width:100%;
+  transition: 0.8s ease-in;
+}
+
+.tindrr-img img:hover {
+  transform: scale(1.07) rotate(4deg);
+  }
 
 
 @media only screen and (max-width: 768px) {
@@ -140,7 +155,7 @@ export default {
   }
 
   .tindrr-img img {
-    max-width: 40%;  /* Ajuste la taille de l'image pour un meilleur équilibre visuel */
+    max-width: 70%;  /* Ajuste la taille de l'image pour un meilleur équilibre visuel */
     height: auto;    /* Garde le ratio hauteur/largeur de l'image */
   }
 }

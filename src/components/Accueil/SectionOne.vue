@@ -3,7 +3,8 @@
     <section class="revy-section-1">
       <div id="titles">
         <div id="Titre1">
-          <p>Votre guide ultime pour découvrir toutes les activités passionnantes qu'offre Yverdon-les-bains !</p>
+          <p>Ton guide ultime pour dénicher toutes 
+            les pépites d’Yverdon-les-Bains !</p>
         </div>
         <div id="Titre2">
           <div>
@@ -39,7 +40,6 @@ export default {
     justify-content: space-between;
   padding: 60px 80px;
   margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
   color: #333;
   height: fit-content;
   min-height: 100vh;
@@ -53,8 +53,6 @@ export default {
   max-width: 800px; 
   margin: auto; /* Centrage du contenu */
 }
-
-
 
 .revy-section-1{
   display: flex;
@@ -113,8 +111,6 @@ margin-bottom: 100px;
 text-align: left;
 }
 
-
-
 .content-container {
   display: flex;             /* Uses flexbox to layout children */
   align-items: flex-end;     /* Aligns children at the bottom of the container */
@@ -127,10 +123,16 @@ text-align: left;
 .content-container img {
   max-width: 20vw;           /* Ensures images do not exceed the width of their container */
   height: auto;              /* Maintains the aspect ratio of the images */
+  transition: 1.1s ease-in-out;
+
 }
 
 
-
+  
+.content-container img:hover {
+transform: scale(1.1);    
+/*transform: translate(10px,4px);  */
+    }
 
 
 @media only screen and (max-width: 768px) {
@@ -160,13 +162,20 @@ text-align: left;
 
   .content-container img {
     max-width: 45vw;  /* Augmente la taille des images pour une meilleure visibilité */
+    transition: 0.9 ease-in-out;
+
   }
+
+  
+    .content-container img:hover {
+    transform: scale(1.2);
+    transform: translate(10px,4px);  
+    }
 
   #titles {
     margin-bottom: 5vh;  /* Ajuste l'espacement vertical */
   }
 }
-
 
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -188,7 +197,16 @@ text-align: left;
 
   .content-container img {
     max-width: 30vw;  /* Ajuste la largeur des images pour un meilleur affichage */
+    transition: 0.9 ease-in-out;
+
   }
+  
+  
+  .content-container img:hover {
+    transform: 1.5;
+    transform: translate(10px,4px);  
+    }
+
 
   #titles {
     margin-bottom: 7vh;  /* Ajuste l'espacement vertical */
