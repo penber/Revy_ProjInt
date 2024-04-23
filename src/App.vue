@@ -1,26 +1,120 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+   
+    <header v-if="showNavBar">
+      <nav id="main-nav">
+        <div>
+          <RouterLink to="/Accueil"> <img id="logo" alt="Revy logo" src="./assets/logo-blanc.png"></RouterLink>
+        </div>
+        <div id="nav-items">
+          <RouterLink to="/MeilleurYv" active-class="active-link"> Meilleur d’Yverdon</RouterLink>
+          <RouterLink to="/CarteMap" active-class="active-link"> Carte</RouterLink>
+          <RouterLink to="/BienEtre" active-class="active-link"> Bien vivre</RouterLink>
+
+        </div>
+      </nav>
+    </header>
+    
+    <router-view  v-model:show-nav-bar.sync="showNavBar"/>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      message: 'Hello, Vue!',
+      showNavBar: true,
+
+    }
+  },  
+  methods: {
+    sayHello() {
+      alert(this.message);
+    }
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  width:100%;
+  max-width: 100vw;
+  min-height: 100%;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+.active-link, .router-link-exact-active{
+  color:  #42b983; /* Changez la couleur selon vos préférences */
+}
+
+#conteneur{
+  max-height: 5%;
+}
+
+#main-nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-height: 5vh;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#nav-items a {
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: large;
+}
+
+
+#nav-items {
+  width: 80%;
+  display: flex;
+  justify-content: right;
+  padding: 15px;
+
+}
+
+#logo {
+  max-height: 50px;
+}
+
+
+#nav-items a:hover,
+#nav-items a:focus {
+    background-color: #b7e5ef25;
+    border-radius: 5px;
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    font-size: 24px;
+}
+
+nav {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
 }
 </style>
+
+
+
+
