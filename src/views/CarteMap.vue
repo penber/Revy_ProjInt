@@ -570,8 +570,11 @@ button:active {
 
   
 #corps { 
+  display: flex;
+  flex-direction: column;
   padding: 5px;
   min-height: 95vh;
+  align-items: center;
 }
 
 

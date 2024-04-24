@@ -407,11 +407,10 @@ export default {
 #map {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 80%;
     min-height: 620px;
     overflow: hidden;
   height: auto;
-  padding: 10px 40px;
  
  align-items: center;
  box-shadow: 13px 12px 6px  rgba(0,0,0,0.2);
@@ -520,6 +519,19 @@ button:active {
     align-items: center;
   }
 
+  #map {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    min-height: 620px;
+    overflow: hidden;
+  height: auto;
+ padding: 0px 15px;
+ align-items: center;
+ box-shadow: 13px 12px 6px  rgba(0,0,0,0.2);
+ margin-bottom: 50px;
+ transition: box-shadow 0.9s ease; /* Ajouter la transition ici */
+}
 
 }
 

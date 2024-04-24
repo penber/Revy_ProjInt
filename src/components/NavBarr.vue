@@ -29,9 +29,9 @@
   </div>
 
   <div id="nav-items">
-    <RouterLink to="/MeilleurYv" class="offlinks"> YverMatchmaking</RouterLink>
+    <RouterLink to="/MeilleurYv" class="offlinks" id="navfont"> YverMatchmaking</RouterLink>
 
-    <RouterLink to="/CarteMap" class="active-link"> YverCarte</RouterLink>
+    <RouterLink to="/CarteMap" class="active-link" > YverCarte</RouterLink>
 
 
   </div>
@@ -96,7 +96,7 @@ font-size: 1.2rem;
 }
 .offlinks:hover {
   transform: 1.05;
-    transform: rfotate(1deg);
+    transform: rotate(1deg);
     font-weight: 600 !important;
 
 
@@ -143,11 +143,19 @@ img:hover{
   font-weight: 380;
   text-decoration: none;
   font-size: 1.2em;
-  padding: 6px !important;
+  padding: 0px !important;
   margin: 0px 0px !important;
   justify-content: center;
+  align-items: baseline;
 }
 
+
+ 
+#nav-items a{
+
+  font-size: 0.7em;
+ 
+}
 
 
 #accueilnav {
@@ -155,6 +163,30 @@ img:hover{
   width: 100%;
   padding: 0px;
 }
+
+
+
+.offlinks{
+  transition: 0.3s ease-in-out;
+font-size: 7px ;
+}
+
+.offlinks:hover {
+  transform: 1.03;
+    transform: rotate(1deg);
+
+}
+
+#navfont{
+  font-size: 1.3em;
+  padding: 1px !important;
+  margin: 0px 0px !important;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-weight: 380;
+  text-decoration: none;
+}
+
 }
 </style>
 

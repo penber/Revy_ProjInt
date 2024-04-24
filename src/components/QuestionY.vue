@@ -589,7 +589,7 @@
   #titreaccroche h3 {
   font-size: 1.45em;
   text-align: left;
-  margin-bottom: 50px;
+  margin-bottom: 28px;
   margin-top: 0px;
   text-align: justify;
   max-width: 98%;
@@ -606,11 +606,13 @@
 
 #questionstext{
   padding: 20px;
-  margin-bottom: 40px;
+  padding-top: 0px;
+  margin-bottom: 10px;
 }
 
 #contenuquestionnaire{
 }
+
 
 
 .quizbtn{
@@ -624,8 +626,8 @@
 
 #echellesavancer{
 
-   min-width: 300px;
-   max-width: 100%;
+   min-width: 340px;
+   max-width: 95%!important;
    justify-content: center;
   padding: 0;
   margin-bottom: 10px;
@@ -638,6 +640,8 @@
  max-width: 100%;
 margin-bottom: 20px;
 }
+
+
 #echellesavancer p{
 margin-top:2px;
 margin-bottom: 50px;
@@ -687,8 +691,8 @@ margin-bottom: 20px;
 }
 
 .rectangle-container svg{
-  width: 50px;
-  height: 10px;
+  width: 40px;
+  height: 7px;
 
 }
 }

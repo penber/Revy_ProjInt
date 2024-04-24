@@ -86,7 +86,6 @@ export default {
   color: white;
   font-weight: 380;
   text-decoration: none;
-  font-size: 1.2em;
   padding:15px;
 
 }
@@ -234,6 +233,17 @@ h1 {
     padding: 15px  !important ;
     margin: 0px  !important ;
   }
+
+
+
+  #nav-items a {
+  color: white;
+  font-weight: 480;
+  text-decoration: none;
+  padding:15px;
+  letter-spacing: 2px;
+
+}
 }
 
 

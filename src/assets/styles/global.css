@@ -24,9 +24,9 @@
 }
 
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
+  max-width: 100%;
   width: 100%;
   font-family: 'typotexte';
 }
@@ -44,11 +44,12 @@ p {
   font-family: 'typotexte', sans-serif;
 }
 
+
 #main-nav {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          width: auto;
+          max-width: 100vw;
           max-height: 10vh;
           background-color: #ffffff00;
           box-shadow: 0 0px 0px rgba(0,0,0,0.0);
@@ -75,14 +76,6 @@ p {
         outline: none;
         
       }
-
-
-
-
-
-
-
-
 
 
 
@@ -368,10 +361,11 @@ margin-bottom: 20px;
 
 
   #main-nav {
-   
+    width: 100vw;
+    justify-content: space-around ;
     max-height: 10vh;
     background-color: #ffffff00;
-padding: 25px 0px;
+padding: 25px 0px !important;
 justify-content: space-around;
 }
 
@@ -438,6 +432,7 @@ justify-content: left ;
 
 .cortagus {
 padding-left: 15px;
+padding-top: 0px;
 }
 
 
