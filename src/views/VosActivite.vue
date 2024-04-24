@@ -55,12 +55,14 @@ export default {
           if (this.activeTags.length === 4) {
                   this.activeTags.splice(0, 1); 
                 }
-
           if (index > -1) {
-              this.activeTags.splice(index, 1);  // Remove tag from active filters
+              this.activeTags.splice(index, 1);
+
           } else if (this.activeTags.length < 3) {
-              this.activeTags.push(tag);  // Add tag to active filters
+
+              this.activeTags.push(tag);  
           }
+          
        
       },
       clearFilters() {

@@ -365,7 +365,7 @@ export default {
       const location = activity.location;
       L.marker([location.latitude, location.longitude], { icon: customIcon })
         .addTo(this.map)
-        .bindPopup(activity.name);
+        .bindPopup(activity.name +"<br> <br>" + activity.description + " "+ "<a href=" + activity.lien + ">Visites leurs site</a>");
     });
 
 

@@ -44,7 +44,6 @@
      <div id="askbuttons">
       <button @click="restartQuiz" id="Mybutton" >Recommencer</button>
 
-      <button @click="nextQuestion" id="Mylittlebutton"  v-if="currentQuestion < questions.length - 1" class="quizbtn">Suivant</button>
 
 
 
@@ -587,16 +586,18 @@
   }
 
   #titreaccroche h3 {
-  font-size: 1.45em;
+  font-size: 1.1em;
   text-align: left;
   margin-bottom: 28px;
   margin-top: 0px;
+  font-weight: 900;
   text-align: justify;
+  text-wrap: wrap;
   max-width: 98%;
 }
     
 #questionstext p {
-  font-size: 1.4em;
+  font-size: 1.15em;
   text-align: left;
   margin-left: 0px;
   margin-bottom: 0px;
@@ -607,7 +608,7 @@
 #questionstext{
   padding: 20px;
   padding-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 #contenuquestionnaire{
@@ -631,6 +632,7 @@
    justify-content: center;
   padding: 0;
   margin-bottom: 10px;
+  margin-top: 20px
 }
 
 #askbuttons {
@@ -644,7 +646,7 @@ margin-bottom: 20px;
 
 #echellesavancer p{
 margin-top:2px;
-margin-bottom: 50px;
+margin-bottom: 30px;
 }
 
 #choise-container {
@@ -661,15 +663,15 @@ margin-bottom: 50px;
   justify-content: space-between;
   width: 100%;
   padding: 10px 0;
-margin-bottom: 20px;
+margin-bottom: 30px;
   font-weight: 700;
   font-size: 1em;
 
 }
 
 #choisebtn {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   max-width: 80px;
   max-height: 80px;
   border-radius: 50px;

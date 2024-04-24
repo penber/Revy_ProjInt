@@ -96,7 +96,7 @@ max-width: 850px;
 
 .card-image img {
   position: absolute; 
-  top: 40%;           
+  top: 30%;           
   left: 50%;          
   transform: translate(-50%, -50%); 
   min-width: 50%;         

@@ -277,21 +277,25 @@ scale:1.1
   font-size: 1.5em;
 }
 
+#vote{
+  justify-content: center;
+  align-items: center;
+}
 
 
 
 
 #jaimepo {
-  min-width: 60px;
-  min-height: 60px;
+  min-width: 50px;
+  min-height: 50px;
   border-radius: 20%;
   margin-right: 0px;
 
 }
 
 #jaime {
-  min-width: 60px;
-  min-height: 60px;
+  min-width: 50px;
+  min-height: 50px;
   border-radius: 50%;
   margin-left: 0px;
 }   

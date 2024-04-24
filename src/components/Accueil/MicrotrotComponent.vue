@@ -128,7 +128,7 @@ width: 100%;
   max-width: 100%;
   text-align: left;
   height: 35vh;
-  margin-top: 15px;
+  margin: 35px 0px;
 }
 
   

@@ -121,7 +121,6 @@ export default {
     background-size: cover;
     color: #fff;
     background-color: rgb(162, 199, 223);
-
   }
 
 #welcome-section div {
@@ -228,13 +227,15 @@ h1 {
   }
 
   #textentre {
-    bottom:20vh;
+    bottom:16vh;
     left: 0vh;
-    padding: 15px  !important ;
+    padding: 15px 0px 0px 12px  !important ;
     margin: 0px  !important ;
   }
 
-
+  #textentre h1 {
+    font-size: 2em  !important ;
+  }
 
   #nav-items a {
   color: white;

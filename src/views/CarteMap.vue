@@ -38,7 +38,7 @@
 
                 <div v-if="affiche==='accueil'">
                   <img src="@/assets/Carte/separation.png" alt="separation de page" id="separee">
-
+                 
                     <VosActivite v-if="activities" :actdata="activities"/>
 
                     </div>
@@ -47,7 +47,7 @@
             <div id="mapconteneur" v-if="maporlist==='map'">
               <img src="@/assets/Carte/separation.png" alt="separation de page" id="separee">
 
-                <CarteMob />
+                <CarteMob/>
               </div>
           </div>
            
@@ -91,7 +91,6 @@ import tindrrBackground from '@/assets/tindrrfond.png';
 import CarteMob from '../components/Carte/CarteMob.vue';
 import RevyFooter from '@/components/RevyFooter.vue';
 import { RouterLink } from 'vue-router';
-
 export default {
     name: 'MeilleurYv',
     components: {
@@ -101,7 +100,7 @@ export default {
       FilteredActivity,
       CarteMob,
       RouterLink,
-      RevyFooter
+      RevyFooter,
 
     },
     data() {
@@ -576,7 +575,9 @@ button:active {
   min-height: 95vh;
   align-items: center;
 }
-
+#mybuttonss{
+  padding: 0px;
+}
 
 }
 

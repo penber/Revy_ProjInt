@@ -575,6 +575,7 @@ export default {
   
 #corps {
   padding: 0px;
+  padding-bottom: 30px;
   min-height: 95vh;
 }
 
@@ -595,5 +596,13 @@ export default {
   padding-right: 10px;
 }
   
+
+
+
+.filtredactivites{
+  
+  margin-bottom:0px;
+padding-top: 0px;
+}
 }
 </style>

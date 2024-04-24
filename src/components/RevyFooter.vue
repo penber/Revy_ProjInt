@@ -15,7 +15,7 @@
   <div class="footer-section">
     <h4>YverCarte</h4>
     <ul class="footer-links">
-      <li><RouterLink to="/Accueil">Carte</RouterLink></li>
+      <li><RouterLink to="/CarteMap">Carte</RouterLink></li>
     </ul>
   </div>
 
@@ -23,17 +23,11 @@
     <h4>Rester en contact</h4>
 
     <div class="social-media">
-    <a href="https://www.facebook.com/yourprofile" target="_blank">
-        <img src="../assets/Icons/Group 85.svg" alt="Facebook">
-    </a>
-    <a href="https://www.twitter.com/yourprofile" target="_blank">
-        <img src="../assets/Icons/Group 86.svg" alt="Twitter">
+    <a href="https://www.tiktok.com/" target="_blank">
+        <img src="../assets/Icons/tiktok.png" alt="Tik-tiok">
     </a>
     <a href="https://www.instagram.com/yourprofile" target="_blank">
         <img src="../assets/Icons/Group 87.svg" alt="Instagram">
-    </a>
-    <a href="https://www.linkedin.com/yourprofile" target="_blank">
-        <img src="../assets/Icons/Group 88.svg" alt="LinkedIn">
     </a>
 </div>
 
@@ -105,11 +99,11 @@ export default {
 .social-media {
   display: flex;
   font-size: 2em;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.social-media span {
-  margin-right: 10px;
+.social-media img {
+  margin-right: 15px;
 }
 
 .footer-bottom {

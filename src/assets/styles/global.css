@@ -222,7 +222,7 @@ transform: scale(1.1);
   font-family: 'Helvetica'; /* Ou une autre police en fonction de votre design */
   color: #333;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 12px 0px 15px;
 }
 
 
@@ -311,6 +311,7 @@ margin-bottom: 20px;
   align-items: center;
   flex-wrap: wrap;
   min-height: 90px;
+  margin-bottom: 20px;
 }
 
 
@@ -382,6 +383,7 @@ justify-content: space-around;
 #Mylittlebutton{
   font-size: 11px;
   max-width: 140px;
+  max-height: 35px;
 }
 
 
