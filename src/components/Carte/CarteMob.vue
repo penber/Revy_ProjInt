@@ -2,9 +2,14 @@
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import markerIconUrl from '@/assets/Icons/Point.png'; 
+import MyFilter from '../MyFilter.vue';
 
 export default {
   name: 'CarteMob',
+
+  components: {
+    MyFilter
+  },
   data() {
     return {
       map: null,
@@ -391,49 +396,9 @@ export default {
         </script>
 
         <template>
-
-            <div id="categorie-filtres">
-
-        <div class="cfilters">
-                                <button 
-                                class="filter-button" 
-                                :class="{ 'active-filter': activeTags.includes('loisirs') }" 
-                                @click="toggleTag('loisirs')"> S'amuser</button>
-                                <button 
-                                class="filter-button" 
-                                :class="{ 'active-filter': activeTags.includes('sport') }" 
-                                @click="toggleTag('sport')">Santé physique</button>
-                                <button 
-                                class="filter-button" 
-                                :class="{ 'active-filter': activeTags.includes('nature') }" 
-                                @click="toggleTag('nature')">Temps pour soi</button>
-                                <button 
-                                class="filter-button" 
-                                :class="{ 'active-filter': activeTags.includes('culture') }" 
-                                @click="toggleTag('culture')">Cultiver la culture</button>
-                                <button 
-                                class="filter-button" 
-                                :class="{ 'active-filter': activeTags.includes('detente') }" 
-                                @click="toggleTag('detente')">Relaxation</button>
-                                <button 
-                                class="filter-button" 
-                                :class="{ 'active-filter': activeTags.includes('aventure') }" 
-                                @click="toggleTag('aventure')">Communauté</button>
-                                <button 
-                                id="Mylittlebutton" 
-                                @click="clearFilters">Supprimer</button>
-
-        </div>
-        </div>
-        
       
-      
-      
-      
-      
-      
-            
-
+    
+          <MyFilter :activeTags="activeTags" @newtag="toggleTag" />
         <div id="map" ></div>
         </template>
 
@@ -543,6 +508,20 @@ button:active {
 
 
 
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 1000px) {
+  #listeact {
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+}
 
 
 

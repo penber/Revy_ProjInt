@@ -52,8 +52,10 @@ p {
           max-height: 10vh;
           background-color: #ffffff00;
           box-shadow: 0 0px 0px rgba(0,0,0,0.0);
-  padding: 25px 40px;
+  padding: 25px 10px;
       }
+
+
 
 
       .match-button{
@@ -75,10 +77,22 @@ p {
       }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
       #Mybutton {
         padding: 1.3em 3em;
         font-size: 12px;
-        max-height: 40px;
+        max-height: 36px;
         align-content: center;
         min-width:140px;
         text-transform: uppercase;
@@ -112,16 +126,24 @@ p {
         transform: translateY(-1px);
       }
 
+
+
+
+
+
       #Mylittlebutton {
-        padding: 1em 2em;
+        padding: 0.1em 2em;
         font-size: 11px;
         max-height: 40px;
         align-content: center;
         text-align: center;
         align-items: center;
-        min-width:fit-content;
-        width: 140px;
-        max-width: 140px;
+
+
+        width: 190px;
+        max-width: 180px;
+min-height: 40px;
+
         text-transform: uppercase;
         letter-spacing: 2.5px;
         font-weight: 500;
@@ -151,6 +173,17 @@ p {
       transform: translateY(-1px);
     }
 
+
+
+
+
+
+
+
+
+
+
+
       
 .filter-button .active-filter {
   padding: 0.3em 0.6em;
@@ -178,6 +211,15 @@ transform: scale(1.1);
 }
 
       
+
+
+
+
+
+
+
+
+
 
 .cortagus {
   display: flex;
@@ -235,6 +277,34 @@ justify-content: left ;
 
 
 
+.repasse{
+  padding: 0.1em 2em;
+  font-size: 11px;
+  max-height: 40px;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+
+
+  width: 220px;
+  max-width: 220px;
+min-height: 40px;
+margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+  text-decoration: none;
+
+}
 
 /* vosactivité*/
 
@@ -250,3 +320,132 @@ justify-content: left ;
   min-height: 90px;
 }
 
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 360px) and (max-width: 1000px) {
+  
+  @font-face {
+    font-family: 'typotitre';
+    src: url('~@/assets/fonts/OpenSauceSans/OpenSauceSans-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36px;
+  }
+  
+  @font-face {
+    font-family: 'typotitre2';
+    src: url('~@/assets/fonts/OpenSauceSans/OpenSauceSans-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+  }
+  
+  @font-face {
+    font-family: 'typotexte';
+    src: url('~@/assets/fonts/OpenSauceSans/OpenSauceSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+  
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'typotexte';
+  }
+
+
+
+  #main-nav {
+   
+    max-height: 10vh;
+    background-color: #ffffff00;
+padding: 25px 0px;
+justify-content: space-around;
+}
+
+
+
+
+#myButton{ 
+  min-width:110px;
+  width: 110px;
+  padding: 8px 10px;
+  max-width:110px;
+}
+
+#Mylittlebutton{
+  font-size: 11px;
+  max-width: 140px;
+}
+
+
+
+.titrecarte h1 {
+  display: flex;
+  font-family: 'typotitre2';
+  font-size: 2.4rem;
+  font-weight: 500;
+  max-width: 85%;
+  margin-bottom: 1rem;
+  margin-top:10px;
+  align-items: left;
+  
+  color: #000; /* Ajustez la couleur selon votre design */
+}
+
+
+.titrecarte p {
+  display: flex;
+max-width: 85%;
+font-family: 'typotexte';
+  font-size: 1.2rem;
+  font-weight: 200;
+  align-items: left;
+justify-content: left ;
+  color: #666; /* Ajustez la couleur selon votre design */
+}
+
+
+
+
+
+
+
+.cfilters{
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 90px;
+}
+
+
+
+
+.cortagus {
+padding-left: 15px;
+}
+
+
+.titrecarte p{
+width: 100%;  }
+
+.titrecarte h1 {
+  width: 100%;  }
+
+
+}

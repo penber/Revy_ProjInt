@@ -139,7 +139,7 @@ max-width: 850px;
   width:90%;
   display: flex;
   justify-content: end;
-  align-items: center;
+  align-items: start;
   flex-direction: row;
   padding: 5px 10px;
   margin: 5px 5px;
@@ -161,8 +161,108 @@ max-width: 850px;
 
 @media (min-width: 368px) and (max-width: 1024px) {
     .card {
-      
+      display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  widows: auto;
+width: 300px;
+ max-width: 320px;
+ height: fit-content;
+ min-height: 420px;
+ height: 340px;
+ max-height: 390px;
+ background: rgb(0, 0, 0);
+ border-radius: 5px;
+ transition: all 0.32s;
+ box-shadow: 10px 10px 2px 1px #304E8D;
+ overflow: hidden;
+ 
+ 
     }
+
+    
+.card:hover {
+ box-shadow: -12px 12px 2px -1px #008C6F;
+}
+
+
+
+.card-image {
+  width: 100%;     
+  height: 150px;   
+  max-height: 150px;    
+  padding-top: 70%;
+  position: relative;  
+  overflow: hidden;    
+}
+
+.card-image img {
+  position: absolute; 
+  top: 50%;           
+  left: 50%;          
+  transform: translate(-50%, -50%); 
+  width: 100%;         
+  min-height: 100%;    
+  object-fit: cover;   
+}
+
+.card-image img {
+  width: 100%;
+  height:auto; 
+  object-fit: cover;
+}
+
+
+.card-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 10px 10px 10px !important;
+  padding-top:15px;
+  background: #000000;
+  overflow: hidden;
+  min-height: 50%;
+  max-height: 150px !important;
+  min-width: 90%;
+  max-width: 100%;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  margin-bottom: 0px;
+  color: #fafafa;
+  font-size: 24px;
+  margin:0;
+}
+
+.card-content p {
+  color: #f2f2f2;
+  font-size: 14px;
+  text-align: justify;
+  line-height: 1.6;
+  padding: 0px 10px;
+  margin:0;
+
+}
+ 
+
+
+.tagaff {
+  padding: 0px 0px;
+  margin: 0px 0px;
+}
+
+
+.tagaff span{
+  margin: 0px 5px;
+  font-weight: 800;
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+}
+
 }
 
 </style>

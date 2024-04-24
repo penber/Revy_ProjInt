@@ -44,6 +44,7 @@ export default {
   color: #333;
   height: fit-content;
   min-height: 100vh;
+
 }
 
 
@@ -139,13 +140,18 @@ transform: scale(1.06);
 @media only screen and (max-width: 768px) {
   #reste {
     padding: 20px;
+    
+  background-image: url('@/assets/question/ligne.png');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: bottom;  
   }
 
   #Titre1{
     font-size:1.6em;
   }
   #Titre1, #Titre2 div {
-    padding: 30px;
+    padding: 20px;
     width: 100%;  /* Utilise toute la largeur disponible */
     margin: 0;
   }
@@ -157,7 +163,7 @@ transform: scale(1.06);
   .content-container {
     display: flex;
     justify-content: space-around;  /* Ajuste l'espacement autour des images */
-    gap: 10px;
+    gap: 15px;
     align-content:center;
   }
 

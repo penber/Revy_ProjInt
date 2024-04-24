@@ -137,4 +137,20 @@ export default {
   }
 }
 
+
+
+@media (min-width: 360px) and (max-width: 1000px) {
+  #listeact {
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+
+  
+
+
+}
+
 </style>

@@ -4,41 +4,8 @@
 <div id="listedactivite">
 
 
-    <div id="filtres">
+    <MyFilter :activeTags="activeTags" @newtag="toggleTag" />
 
-<div class="categorie-filtres">
-<div class="cfilters">
-        <button 
-            class="filter-button" 
-            :class="{ 'active-filter': activeTags.includes('sport') }" 
-            @click="toggleTag('sport')">Sport</button>
-            <button 
-            class="filter-button" 
-            :class="{ 'active-filter': activeTags.includes('detente') }" 
-            @click="toggleTag('detente')">Detente</button>
-            <button 
-            class="filter-button" 
-            :class="{ 'active-filter': activeTags.includes('aventure') }" 
-            @click="toggleTag('aventure')">Aventure</button>
-        <button 
-            class="filter-button" 
-            :class="{ 'active-filter': activeTags.includes('loisirs') }" 
-            @click="toggleTag('loisirs')">Sorties</button>
-        <button 
-            class="filter-button" 
-            :class="{ 'active-filter': activeTags.includes('culture') }" 
-            @click="toggleTag('culture')">Culture</button>
-            <button 
-            class="filter-button" 
-            :class="{ 'active-filter': activeTags.includes('nature') }" 
-            @click="toggleTag('nature')">Nature</button>
-        <button    id="Mylittlebutton" 
-            class="filter-button filter-clear" 
-            @click="clearFilters">Supprimer</button>
-    </div>
-</div>   
-</div>
-   
 
 <div id="listeact">
       <!-- <ActCard class="Onecard" v-for="data in filteredActivities" :key="data.name" :myData="data"/> -->
@@ -55,12 +22,14 @@
 <script>
 // import ActCard from '../components/ActCard.vue';
 import NewCard from '../components/NewCard.vue';
+import MyFilter from '../components/MyFilter.vue';
 
 export default {
   name: 'VosActivite',
   components: {
     //   ActCard,
-      NewCard
+      NewCard,
+      MyFilter
   },
   props: {
       actdata: Array
@@ -86,7 +55,7 @@ export default {
           if (this.activeTags.length === 4) {
                   this.activeTags.splice(0, 1); 
                 }
-                
+
           if (index > -1) {
               this.activeTags.splice(index, 1);  // Remove tag from active filters
           } else if (this.activeTags.length < 3) {
@@ -241,10 +210,11 @@ button:active {
   #listeact {
     display: flex;
     flex-direction: row;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     background-color: transparent;
     box-shadow: none;
     margin-bottom: 50px;

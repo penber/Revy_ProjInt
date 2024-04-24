@@ -39,7 +39,7 @@
 
   </header>
 
-  <header v-if="activeClass=== 'Accueil' " id="accueilnav">
+  <header v-if="activeClass=== 'Accueil' " id="accueilnav" >
     <nav id="main-nav" >
 
 <div>
@@ -96,7 +96,7 @@ font-size: 1.2rem;
 }
 .offlinks:hover {
   transform: 1.05;
-    transform: rotate(2deg);
+    transform: rfotate(1deg);
     font-weight: 600 !important;
 
 
@@ -105,6 +105,7 @@ font-size: 1.2rem;
 #accueilnav {
   position:absolute;
   width: 100%;
+  padding: 0px;
 }
 /* la souris à un halo de contour fondu en vert lors du survol de offlinks */
 
@@ -114,7 +115,7 @@ img {
 }
 img:hover{
   transform: 1.5;
-    transform: rotate(4deg);
+    transform: rotate(2deg);
 
 }
 
@@ -122,7 +123,38 @@ img:hover{
 #Mybutton {
   /*ne pas souligner le texte*/
   text-decoration: none;
+}
 
+
+
+
+@media (min-width: 360px) and (max-width: 1000px) {
+ #logo {
+   width: 100px;
+   height: 40px;
+   padding-left: 8px;
+ }
+
+
+ 
+#nav-items {
+  width: fit-content;
+  color: white;
+  font-weight: 380;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 6px !important;
+  margin: 0px 0px !important;
+  justify-content: center;
+}
+
+
+
+#accueilnav {
+  position:absolute;
+  width: 100%;
+  padding: 0px;
+}
 }
 </style>
 

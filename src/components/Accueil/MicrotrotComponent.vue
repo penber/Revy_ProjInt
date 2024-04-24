@@ -40,11 +40,15 @@ export default {
 
 #microtrot {
   display: flex;
-  flex-direction: column; /* En colonne pour mobile */
+  flex-direction: column; 
   align-items: center;
   max-width: 100%;
   margin: 0px auto;
-  margin-bottom: 80px;
+  margin-bottom: 0px;
+  background-image: url('@/assets/Accueil/lignetrajet.png');
+  background-repeat: no-repeat;
+  background-position: right;
+
 }
 
 
@@ -75,9 +79,10 @@ max-width: 55%;
   justify-content: center;
   z-index: 1;
 
+  /*
   background-image: url('@/assets/Accueil/lignetrajetmicrotrot.png');
   background-position: bottom right;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
 
 }
 
@@ -87,6 +92,8 @@ max-width: 55%;
   order: 1; 
   width: 100%; 
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 #microtot-img video {
@@ -108,6 +115,36 @@ max-width: 55%;
   #microtrot p {
     text-align: left; 
   }
+}
+
+
+
+@media (min-width: 360px) and (max-width: 1000px) {
+
+  
+#microtot-texte {
+width: 100%;
+  padding: 0px 0px;
+  max-width: 100%;
+  text-align: left;
+  height: 35vh;
+  margin-top: 15px;
+}
+
+  
+#microtot-texte h2{
+width: 100%;
+  padding: 0px 50px;
+  max-width: 80%;
+  text-align: left;
+}
+
+#microtot-img {
+  width: 100%; 
+  text-align: center;
+  justify-content: center;
+}
+
 }
 
 

@@ -214,8 +214,8 @@ export default {
 
 
 #jaime {
-  min-width: 80px;
-  min-height: 80px;
+  min-width: 60px;
+  min-height: 60px;
   border-radius: 50%;
 background-image: url('@/assets/Icons/like.png');
 background-size: cover;
@@ -263,5 +263,38 @@ scale:1.1
 
 
 
+
+
+
+@media (min-width: 360px) and (max-width: 1000px) {
+  #listeact {
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+  }
+#texttindrr h1{
+
+  font-size: 1.5em;
+}
+
+
+
+
+
+#jaimepo {
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 20%;
+  margin-right: 0px;
+
+}
+
+#jaime {
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 50%;
+  margin-left: 0px;
+}   
+}
 
 </style>

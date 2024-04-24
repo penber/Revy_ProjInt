@@ -70,7 +70,6 @@ export default {
 
 
 #conteneur{
-
   display: flex;
   flex-direction: column;
   max-width: 100vw;
@@ -80,21 +79,6 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
 
-}
-.spaceheader {
-  width: 93vw;
-    display: flex;
-      flex-direction: row;
-    position: absolute;
-    left: 3vw;
-    top:3vh;
-  
-  padding: 0;
-  margin:0px;
-
-  background-color: #ffffff00;
-  /* box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.05); */
-  z-index: 1000;
 }
 
 
@@ -229,7 +213,28 @@ h1 {
 
 
 
+ 
+@media (min-width: 360px) and (max-width: 1000px) {
 
+  #listeact {
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+  }
+  #welcome-section{
+    align-items: left;
+    align-content: baseline  !important ;
+    padding: 0px  !important ;
+    margin: 0px  !important ;
+  }
+
+  #textentre {
+    bottom:20vh;
+    left: 0vh;
+    padding: 15px  !important ;
+    margin: 0px  !important ;
+  }
+}
 
 
 </style>

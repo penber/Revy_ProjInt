@@ -109,27 +109,47 @@ export default {
   }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 968px) {
   #tindrr {
     flex-direction: column;  /* Empile les contenus verticalement pour les petits écrans */
     align-items: center;    /* Centre les éléments pour une meilleure apparence sur mobile */
-    padding: 20px;          /* Ajoute un peu de padding pour ne pas coller aux bords de l'écran */
+    padding: 0px;
+    margin-top:0px; 
+          /* Ajoute un peu de padding pour ne pas coller aux bords de l'écran */
   }
 
   .tindrrre {
     max-width: 100%;  /* Utilise toute la largeur disponible */
   }
 
-  .tindrr-text h2 {
-    font-size: 1.8em;  /* Réduit la taille de la police pour les titres sur les petits écrans */
+  .tindrrre {
+    max-width: 100%;
+    align-items: center; 
+    margin-bottom: 40px; /* Utilise toute la largeur disponible */
   }
 
+  .tindrr-text  {
+   padding-left: 15px;
+   max-width: 380px; /* Réduit la taille de la police pour les titres sur les petits écrans */
+    align-items: start;
+  }
+
+  .tindrr-text h2 {
+    font-size: 1.7em;  
+    width:95%; 
+  margin-bottom: 15px; }
+
   .tindrr-text p {
-    font-size: 1em;  /* Réduit la taille de la police pour le texte sur les petits écrans */
+    font-size: 1.1em; 
+    width:90%; /* Réduit la taille de la police pour le texte sur les petits écrans */
   }
 
   .tindrr-img img {
-    max-width: 100%;  /* Ajuste la largeur de l'image pour qu'elle s'adapte à la largeur de l'écran */
+    max-width: 90%;  /* Ajuste la largeur de l'image pour qu'elle s'adapte à la largeur de l'écran */
+    height: auto;     /* Garde le ratio hauteur/largeur de l'image */
+  }
+  .tindrr-img img {
+    max-width: 70%;  /* Ajuste la largeur de l'image pour qu'elle s'adapte à la largeur de l'écran */
     height: auto;     /* Garde le ratio hauteur/largeur de l'image */
   }
 }

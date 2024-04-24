@@ -9,7 +9,7 @@
       <div id="questionstext"> 
             <div id="titreaccroche">
                   <h3>  Avant de te jeter dans le grand bain des activités, 
-                    faisons connaissance ! Je ne voudrais pas te recommander une séance de tricot 
+                    faisons connaissance ! <br>Je ne voudrais pas te recommander une séance de tricot 
                     si tu préfères les cascades en VTT !</h3>
             </div>
 
@@ -423,12 +423,13 @@
 }
 
 #contenuquestionnaire {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   height: 100%;
-  padding: 10px 50px 0px 50px;
+  padding: 10px 0px 0px 0px;
 }
 
 
@@ -532,6 +533,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding:0px 20px;
+  align-items: center;
 }
 
 .quizbtn{
@@ -572,6 +574,123 @@
 
 .quiz-container > div {
   animation: fadeIn 0.5s ease-out;
+}
+
+
+
+
+@media (min-width: 360px) and (max-width: 1000px) {
+  #listeact {
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #titreaccroche h3 {
+  font-size: 1.45em;
+  text-align: left;
+  margin-bottom: 50px;
+  margin-top: 0px;
+  text-align: justify;
+  max-width: 98%;
+}
+    
+#questionstext p {
+  font-size: 1.4em;
+  text-align: left;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+
+#questionstext{
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+#contenuquestionnaire{
+}
+
+
+.quizbtn{
+
+  padding: 0px;
+  margin-left: 15px;
+ 
+}
+
+
+
+#echellesavancer{
+
+   min-width: 300px;
+   max-width: 100%;
+   justify-content: center;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+#askbuttons {
+  width: 100% ;
+ justify-content: space-around;
+ padding: 0px 0px;
+ max-width: 100%;
+margin-bottom: 20px;
+}
+#echellesavancer p{
+margin-top:2px;
+margin-bottom: 50px;
+}
+
+#choise-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+} 
+
+#choise-labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0;
+margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1em;
+
+}
+
+#choisebtn {
+  width: 50px;
+  height: 50px;
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50px;
+  background-color: #447ebd00;
+  border: 2px solid #008C6F;
+  transform: scale(0.96);
+  transition: 0.4s;
+
+}
+#choisebtn:hover {
+  background-color: #008C6F;
+  transform: scale(1.07);
+}
+
+
+#barreavancement {
+
+   margin-top: 20px;
+}
+
+.rectangle-container svg{
+  width: 50px;
+  height: 10px;
+
+}
 }
 
   </style>

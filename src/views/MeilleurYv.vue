@@ -68,7 +68,7 @@
         </div>
 
         <div>
-          <button @click="showquestion" id="Mylittlebutton">Repasser le test</button>
+          <button @click="showquestion"  class="repasse">Repasser le test</button>
         </div>
 
 </section>
@@ -534,7 +534,6 @@ export default {
   }
 
   #Mybutton {
-    width: 100%;
     max-width: 220px;
         padding: 1em 2em;
         font-size: 12px;
@@ -563,4 +562,38 @@ export default {
       #Mybutton:active {
         transform: translateY(-1px);
       }
+
+
+      
+  @media (min-width: 360px) and (max-width: 1000px) {
+  #listeact {
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  
+#corps {
+  padding: 0px;
+  min-height: 95vh;
+}
+
+
+#myButton{ 
+  min-width:110px !important;
+  width: 110px !important;
+  padding: 8px 10px !important;
+  max-width:110px !important;
+}
+
+
+.resultat section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:30px;
+  padding-right: 10px;
+}
+  
+}
 </style>

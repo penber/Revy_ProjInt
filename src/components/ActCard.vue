@@ -125,4 +125,43 @@ width: 300px;
 }
  
 
+
+
+
+@media (min-width: 360px) and (max-width: 1000px) {
+  #listeact {
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  
+.carder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  widows: auto;
+width: 240px;
+ max-width: 320px;
+ height: fit-content;
+ min-height: 380px;
+ height: 340px;
+ max-height: 390px;
+ background: rgb(255, 255, 255);
+ border-radius: 5px;
+ transition: all 0.32s;
+ box-shadow: 10px 10px 2px 1px #304E8D;
+ overflow: hidden;
+}
+
+.carder-content h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 20px;
+
+}
+}
+
+
 </style>
