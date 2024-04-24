@@ -206,6 +206,12 @@ background-color: #ffffff00;
 
 }
 
+
+.tagaff span:hover{
+  color: #008C6F;
+  scale: 1.05;
+}
+
 @media (min-width: 368px) and (max-width: 1024px) {
     .card {
       display: flex;

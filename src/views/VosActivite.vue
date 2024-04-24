@@ -50,21 +50,25 @@ export default {
       }
   },
   methods: {
-      toggleTag(tag) {
-          const index = this.activeTags.indexOf(tag);
-          if (this.activeTags.length === 4) {
-                  this.activeTags.splice(0, 1); 
-                }
-          if (index > -1) {
-              this.activeTags.splice(index, 1);
+    toggleTag(tag) {
+             
+             
+             if (Array.isArray(tag) && tag.length === 0) {
+                 this.clearFilters();
+             } else {
+               const index = this.activeTags.indexOf(tag);
 
-          } else if (this.activeTags.length < 3) {
+               if (index > -1) {
+               this.activeTags.splice(index, 1); 
+               } else if (this.activeTags.length < 4) {
+               this.activeTags.push(tag); // Add tag to active filters
+               } 
+               if (this.activeTags.length === 4) {
+                 this.activeTags.splice(0, 1); 
+               }
+             }
+           },
 
-              this.activeTags.push(tag);  
-          }
-          
-       
-      },
       clearFilters() {
           this.activeTags = [];  // Clear all filters
       }

@@ -375,7 +375,13 @@ export default {
 
             
             toggleTag(tag) {
+             
+             
+              if (Array.isArray(tag) && tag.length === 0) {
+                  this.clearFilters();
+              } else {
                 const index = this.activeTags.indexOf(tag);
+
                 if (index > -1) {
                 this.activeTags.splice(index, 1); 
                 } else if (this.activeTags.length < 4) {
@@ -384,7 +390,7 @@ export default {
                 if (this.activeTags.length === 4) {
                   this.activeTags.splice(0, 1); 
                 }
-             
+              }
                 this.updateMap(); // Update map every time the tags change
                 console.log("ici");
             },

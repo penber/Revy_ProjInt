@@ -360,7 +360,7 @@
         return average > 2;
       })
       .sort(() => 0.5 - Math.random()) // Ajoute un tri aléatoire
-      .slice(0, 12);
+      .slice(0, 22);
   }
 },
 
