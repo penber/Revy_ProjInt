@@ -137,8 +137,8 @@ export default {
     background-size: cover;
     color: #fff;
     background-color: rgb(162, 199, 223);
-    text-shadow: 1px 1px 3px #00000064;
-}
+
+  }
 
 #welcome-section div {
     text-align: left;

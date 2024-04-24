@@ -162,6 +162,7 @@ export default {
   gap: 20px;
   height: fit-content;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .activity-display  {

@@ -123,7 +123,7 @@ text-align: left;
 .content-container img {
   max-width: 20vw;           /* Ensures images do not exceed the width of their container */
   height: auto;              /* Maintains the aspect ratio of the images */
-  transition: 1.1s ease-in-out;
+  transition: 0.8s ease-in-out;
 
 }
 

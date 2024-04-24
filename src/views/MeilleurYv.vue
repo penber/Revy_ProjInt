@@ -15,9 +15,11 @@
 
   <div class="cortagus">
 
-<div id="titrecarte">
+<div class="titrecarte">
   <h1>Ce ne sont pas les activités qui manquent !</h1>
-  <p>Yverdon regorge d'activités passionnantes, mais toutes ne sont pas faites pour toi. Passe notre test personnalisé et découvre les activités qui correspondent parfaitement à tes goûts et à tes intérêts.</p>
+  <p>Yverdon regorge d'activités passionnantes, mais toutes ne sont pas faites pour toi. 
+    Passe notre test personnalisé et découvre les activités qui correspondent parfaitement 
+    à tes goûts et à tes intérêts.</p>
 </div>
 
 <div id="mybuttonss">
@@ -57,21 +59,25 @@
         </div>
 
 
-        <div v-if="affiche ==='resultats'">
+        <div v-if="affiche ==='resultats'" class="resultat">
           <section >
 
-<div id="titrecarte">
+<div class="titrecarte">
           <h1>On a trouver vos match !</h1>
           <p>Bravo pour ton match avec les activités d'Yverdon ! 
             Lance-toi et explore les coins cachés pour transformer 
             ton expérience urbaine en aventure inoubliable.</p>
-          <br>
           <p> Découvre les lieux qui feront de chaque moment une découverte exceptionnelle. Bonne exploration !  </p>
         </div>
 
-<img src="@/assets/Carte/separation.png" alt="separation de page" id="separee">
+        <div>
+          <button @click="showquestion" id="Mylittlebutton">Repasser le test</button>
+        </div>
 
 </section>
+
+<img src="@/assets/Carte/separation.png" alt="separation de page" id="separee">
+
 
         <VosActivite :actdata="datareceived" />      
         </div>
@@ -166,7 +172,7 @@ export default {
                           
                           { "name": "Grottes de Vallorbe", "tags": ["aventure", "nature", "culture"], "state": false,
                         "description": "Découvrez les grottes de Vallorbe et leur univers souterrain.",
-                          "img":"maisond'ailleurs.jpg",
+                          "img":"grottevalorbe.jpeg",
                   "lien":" https://grottesdevallorbe.ch/ ",
                   "location": {
                             "latitude":  46.69894084285282,
@@ -467,7 +473,7 @@ export default {
   background-image: url('../assets/question/ligne.png');
   background-size: cover;
   background-repeat: repeat;
-  background-position: bottom;  
+  background-position: top;  
   padding: 20px;
   min-height: 95vh;
 }
@@ -508,7 +514,13 @@ export default {
     margin: 50px;
   }
 
-
+.resultat section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top:30px;
+  padding-right: 80px;
+}
   
   #mybuttonss {
     display: flex;
@@ -541,10 +553,10 @@ export default {
       
       
       #Mybutton:hover {
-        background-color: #a0dfe2;
-        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        background-color: #000000;
+        box-shadow: 2px 5px 8px rgba(133, 193, 152, 0.915);
         color: #fff;
-        transform: translateY(-7px);
+        transform: translateY(-3px);
       }
       
       #Mybutton:active {

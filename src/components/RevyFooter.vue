@@ -9,23 +9,34 @@
   <div class="footer-section">
     <h4>YverMatchmaking</h4>
     <ul class="footer-links">
-      <li>Test</li>
+      <li><RouterLink to="/MeilleurYv">Faire le test</RouterLink></li>
     </ul>
   </div>
   <div class="footer-section">
     <h4>Bien y vivre</h4>
     <ul class="footer-links">
-      <li>Carte</li>
+      <li><RouterLink to="/Accueil">Accueil</RouterLink></li>
     </ul>
   </div>
+
   <div class="footer-section">
     <h4>Rester en contact</h4>
+
     <div class="social-media">
-      <img src="../assets/Icons/Group 85.svg">
-      <img src="../assets/Icons/Group 86.svg">
-      <img src="../assets/Icons/Group 87.svg">
-      <img src="../assets/Icons/Group 88.svg">
-    </div>
+    <a href="https://www.facebook.com/yourprofile" target="_blank">
+        <img src="../assets/Icons/Group 85.svg" alt="Facebook">
+    </a>
+    <a href="https://www.twitter.com/yourprofile" target="_blank">
+        <img src="../assets/Icons/Group 86.svg" alt="Twitter">
+    </a>
+    <a href="https://www.instagram.com/yourprofile" target="_blank">
+        <img src="../assets/Icons/Group 87.svg" alt="Instagram">
+    </a>
+    <a href="https://www.linkedin.com/yourprofile" target="_blank">
+        <img src="../assets/Icons/Group 88.svg" alt="LinkedIn">
+    </a>
+</div>
+
   </div>
   <div class="footer-bottom">
     ©2024 Revy - All rights reserved
@@ -76,7 +87,14 @@ export default {
 }
 
 .footer-links li {
+  color : white;
   margin-bottom: 10px;
+}
+
+.footer-links li a{
+  color : white;
+  margin-bottom: 10px;
+  text-decoration: none;
 }
 
 .social-media {

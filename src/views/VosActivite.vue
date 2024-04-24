@@ -6,12 +6,20 @@
 
     <div id="filtres">
 
-<div class="filter-container">
-<div id="buttons">
+<div class="categorie-filtres">
+<div class="cfilters">
         <button 
             class="filter-button" 
             :class="{ 'active-filter': activeTags.includes('sport') }" 
             @click="toggleTag('sport')">Sport</button>
+            <button 
+            class="filter-button" 
+            :class="{ 'active-filter': activeTags.includes('detente') }" 
+            @click="toggleTag('detente')">Detente</button>
+            <button 
+            class="filter-button" 
+            :class="{ 'active-filter': activeTags.includes('aventure') }" 
+            @click="toggleTag('aventure')">Aventure</button>
         <button 
             class="filter-button" 
             :class="{ 'active-filter': activeTags.includes('loisirs') }" 
@@ -20,7 +28,11 @@
             class="filter-button" 
             :class="{ 'active-filter': activeTags.includes('culture') }" 
             @click="toggleTag('culture')">Culture</button>
-        <button 
+            <button 
+            class="filter-button" 
+            :class="{ 'active-filter': activeTags.includes('nature') }" 
+            @click="toggleTag('nature')">Nature</button>
+        <button    id="Mylittlebutton" 
             class="filter-button filter-clear" 
             @click="clearFilters">Supprimer</button>
     </div>
@@ -79,7 +91,7 @@ export default {
       }
   },
   created() {
-      console.log(this.actdata);  // Debugging
+      console.log(this.actdata);  
   }
 }
 </script>
@@ -111,6 +123,17 @@ export default {
   
     #titrecarte p{
    width:80%;
+    }
+    #filtres {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #ffffff00;
+        box-shadow: 0 0px 0px rgba(0,0,0,0.0);
+        margin-bottom: 50px;
+        padding:10px;
     }
    #filtres h1 {
         margin: 25px 0px;}
@@ -144,34 +167,6 @@ export default {
     padding:10px;
 }
 
-    .filter-container{
-        display: flex;
-        flex-direction: row;
-        flex-wrap:wrap;
-        max-width: 100vw;
-        justify-content: space-around;
-        align-items: center;
-    }
-    button {
-        padding: 1.3em 2em;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 2.5px;
-        font-weight: 500;
-        min-width: 140px;
-        max-width: 140px;
-        color: #000;
-        background-color: #fff;
-        border: none;
-        border-radius: 45px;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease 0s;
-        cursor: pointer;
-        outline: none;
-        margin-right: 5%;
-        margin-bottom: 10px;
-      }
-
       #buttons{
         display: flex;
         flex-direction: row;
@@ -181,43 +176,59 @@ export default {
         justify-content: space-around;
       }
 
-#Mybutton:hover {
-        background-color: #87ceb2;
-        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-        color: #fff;
-        transform: translateY(-7px);
-      }
-      
-      #Mybutton:active {
-        transform: translateY(-1px);
-      }
 
-button:hover {
-  background-color: #6b92d4;
-  box-shadow: 0px 15px 20px rgba(188, 220, 225, 0.4);
-  color: #fff;
-  font-weight: 600;
-  transform: translateY(-7px);
+      
+
+
+
+
+#categorie-filtres {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 92vw;  
+  justify-content: space-around;
+  margin-bottom:40px;
+  gap: 20px;
+  padding-left: 40px;
 }
 
-button:active {
-  transform: translateY(-1px);
+      button {
+  max-width: 140px;
+  font-size: 12px;
+min-width: 140px;
+  border: none;
+  padding: 10px 10px;
+margin: 0px;
+  border-radius: 45px;
+  background-color: #f9f9f9; /* Ajustez la couleur du bouton selon votre design */
+  color: black;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.5s;
 }
 
 
 .filter-button.active-filter {
-    background-color: #4CAF50; /* Green background when active */
+    background-color: #008C6F; /* Green background when active */
     color: white;
+    font-size: 13px;
+
+}
+button:hover {
+  opacity: 0.8; /* Effet d'interaction simple */
+  background-color: #1d977e; /* Ajustez la couleur du bouton selon votre design */
+  color: white;
+  transform: scale(1.05);
+border: 5px solid white;
 }
 
-.filter-button {
-    transition: background-color 0.3s; /* Smooth transition for background color change */
+button:active {
+    transform: scale(1.1); /* Effet d'interaction simple */
 }
-#buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+
+
+
 
   #listeact {
     display: flex;

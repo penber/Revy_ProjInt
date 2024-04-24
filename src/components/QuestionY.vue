@@ -16,11 +16,6 @@
             <p>{{ questions[currentQuestion].text }}</p>
       </div>
              
-    <!-- <div id="echellesavancer">
-                  <button v-for="score in 5" :key="score" @click="selectAnswer(score)">{{ score }}</button>
-                  <p>Question {{ currentQuestion + 1 }}/{{ questions.length }}</p>
-
-              </div> -->
               <div id="echellesavancer">
               <div id="choise-container">
                 <button id="choisebtn" v-for="score in 5" :key="score" @click="selectAnswer(score)"></button>
@@ -33,23 +28,25 @@
 
                 <div id="barreavancement">
           <div v-for="(question, index) in questions" :key="question.id" class="rectangle-container">
-            <svg width="90" height="10">
-              <rect width="90" height="10" :fill="currentQuestion >= index ? '#008C6F' : '#D3D3D3'" />
+            <svg width="90" height="10" style=" border:solid 1px grey; border-radius: 5px;">
+              <rect width="90" height="10" :fill="currentQuestion > index ? '#008C6F' : '#D3D3D300'" />
             </svg>
           </div>
         </div>
 
               
              
-              <p>Question {{ currentQuestion + 1 }} sur {{ questions.length }}</p>
+              <p>Question {{ currentQuestion  }} sur {{ questions.length }}</p>
             </div>
 
      </div>
 
      <div id="askbuttons">
-      <button @click="nextQuestion" v-if="currentQuestion < questions.length - 1">Suivant</button>
+      <button @click="restartQuiz" id="Mybutton" >Recommencer</button>
 
-      <button @click="restartQuiz">Recommencer</button>
+      <button @click="nextQuestion" id="Mybutton"  v-if="currentQuestion < questions.length - 1" class="quizbtn">Suivant</button>
+
+
 
      </div>
          
@@ -70,16 +67,16 @@
         currentQuestion: 0,
         showResults: false,
         likedActs: [],
-        tagsScores: { loisirs: 0, sport: 0, nature: 0, culture: 0, détente: 0, aventure: 0 },
+        tagsScores: { loisirs: 0, sport: 0, nature: 0, culture: 0, detente: 0, aventure: 0 },
         questions: [
           { text: "Préférez-vous les activités en plein air ?", tags: { nature: 2, sport: 1, loisir:1 } },
           { text: "Êtes-vous intéressé par l'histoire et le patrimoine culturel ?", tags: { culture: 2, loisirs: 1, aventure: -1 } },
-            { text: "Aimez-vous les activités relaxantes ?", tags: { détente: 2, loisirs: 1, sport: -1 } },
-        { text: "Préférez-vous les activités sportives ?", tags: { sport: 2, aventure: 1, nature: 1, détente:-1 } },
-      //     { text: "Aimez-vous les activités culturelles ?", tags: { culture: 2, loisirs: 1 } },
+            { text: "Aimez-vous les activités relaxantes ?", tags: { detente: 2, loisirs: 1, sport: -1 } },
+        { text: "Préférez-vous les activités sportives ?", tags: { sport: 2, aventure: 1, nature: 1, detente:-1 } },
+         { text: "Aimez-vous les activités culturelles ?", tags: { culture: 2, loisirs: 1 } },
       //     { text: "Préférez-vous les activités en famille ?", tags: { loisirs: 2, détente: 1, sport: -1 } },
       //    { text: "Aimez-vous les activités éducatives ?", tags: { culture: 2, loisirs: 1 } },
-         { text: "Préférez-vous les activités d'aventure ?", tags: { aventure: 2, sport: 1, nature: -1, détente:-1}}
+         { text: "Préférez-vous les activités d'aventure ?", tags: { aventure: 2, sport: 1, nature: -1, detente:-1}}
         ],
                 
         activities:  [
@@ -134,7 +131,7 @@
                           
                           { "name": "Grottes de Vallorbe", "tags": ["aventure", "nature", "culture"], "state": false,
                         "description": "Découvrez les grottes de Vallorbe et leur univers souterrain.",
-                          "img":"maisond'ailleurs.jpg",
+                          "img":"grottevalorbe.jpeg",
                   "lien":" https://grottesdevallorbe.ch/ ",
                   "location": {
                             "latitude":  46.69894084285282,
@@ -358,10 +355,10 @@
       filteredActivities() {
         return this.activities.filter((activity) => {
           const scores = activity.tags.map(tag => this.tagsScores[tag]);
-          const average = scores.reduce((a, b) => a + b, 0) / scores.length;
-          console.log(average)
-          return average > 1; 
-        }).slice(0, 10); 
+          const average = scores.reduce((a, b) => a + b, 0) / scores.length; // Calculer la moyenne des scores pour chaque activité 
+          console.log("moyenne:"+average)
+          return average > 2; 
+        }).slice(0, 12); 
       }
     },
     methods: {
@@ -470,10 +467,13 @@
   border-radius: 50px;
   background-color: #447ebd00;
   border: 2px solid #008C6F;
+  transform: scale(0.96);
+  transition: 0.4s;
+
 }
 #choisebtn:hover {
   background-color: #008C6F;
-  transform: scale(1.1);
+  transform: scale(1.07);
 }
 
 #questionstext {
@@ -494,8 +494,6 @@
   text-align: left;
   margin: 10px;
   font-weight: 500;
-
-
 }
 
 #barreavancement {
@@ -503,22 +501,22 @@
   flex-direction: row;
   justify-content: center; /* Assurez l'espacement entre les éléments */
   width: 100%;
-  padding-bottom: 5px; /* Ajoutez du padding pour que les rectangles ne touchent pas les bords du conteneur */
   margin-top: 70px;
   border-radius: 10px;
-
+  overflow: hidden; 
 }
 
 .rectangle-container {
   margin: 0 5px; /* Ajoutez une marge autour des rectangles pour l'espacement */
   border-radius: 10px;
-
+  overflow: hidden; /* Important pour l'animation centrée */
+  background-color: #ffffff00;
 }
 
 .rectangles {
   width:100%;
   border-radius: 10px;
-  fill: #5b380b; /* Utilisez 'fill' pour SVG au lieu de 'background-color' */
+ /* Utilisez 'fill' pour SVG au lieu de 'background-color' */
 }
 
 #askbuttons {
@@ -528,27 +526,27 @@
   padding:0px 20px;
 }
 
-button {
-  display: inline-block;
-  background-color: #447fbd;
+.quizbtn{
+  font-size: 1.2em;
+  background-color: #304E8D;
   color: #fff;
-  border: none;
-  padding: 10px 20px;
+  padding: 10px 25px;
   margin: 10px;
-  border-radius: 5px;
+  border:lightcyan 3px solid;
+  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  outline: rgb(209, 218, 245) solid 2px;
 
-  background-color: #0b5b17;
+.quizbtn:hover{
+  font-size: 1.25em;
+  background-color: #00030a;
+  color: #fefafa;
+  border: 2px solid #eaeaea;
+
 }
 
-button:focus {
-  box-shadow: 0 0 0 2px rgba(29, 101, 179, 0.5);
-}
 
 
 

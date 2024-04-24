@@ -11,7 +11,7 @@
     <div v-if="affiche==='accueil'">
 
     <div class="cortagus">
-      <div id="titrecarte">
+      <div class="titrecarte">
                   <h1>Bien kiffer la life à Yverdon-les-Bains !</h1>
                   <p>Pour être le champion de la jungle urbaine, faut que tu découvres tous les secrets de la ville ! 
                     Va fouiner sur les cartes pour trouver les spots qui vont te rendre la vie en ville carrément géniale !</p>
@@ -20,9 +20,9 @@
         <div id="mybuttonss">
           
           <router-link id="Mybutton" to="/MeilleurYv">Trouver votre match</router-link>
-        <button @click="enliste" id="Mybutton" v-if="maporlist==='list'"> Sur la carte</button>
-        <button @click="enliste" id="Mybutton" v-if="maporlist==='map'">En liste</button>
+      
 
+        <input type="checkbox" @click="enliste" class="theme-checkbox">
         </div>
 
 
@@ -78,6 +78,7 @@
 
   </div>
 
+  <RevyFooter />
 
 </template>
 
@@ -88,6 +89,7 @@ import FilteredActivity from '../components/FilteredActivity.vue';
 import NavBarr from '../components/NavBarr.vue';
 import tindrrBackground from '@/assets/tindrrfond.png';
 import CarteMob from '../components/Carte/CarteMob.vue';
+import RevyFooter from '@/components/RevyFooter.vue';
 import { RouterLink } from 'vue-router';
 export default {
     name: 'MeilleurYv',
@@ -97,7 +99,8 @@ export default {
       NavBarr,
       FilteredActivity,
       CarteMob,
-      RouterLink
+      RouterLink,
+      RevyFooter
 
     },
     data() {
@@ -159,7 +162,7 @@ export default {
                           
                           { "name": "Grottes de Vallorbe", "tags": ["aventure", "nature", "culture"], "state": false,
                         "description": "Découvrez les grottes de Vallorbe et leur univers souterrain.",
-                          "img":"maisond'ailleurs.jpg",
+                          "img":"grottevalorbe.jpeg",
                   "lien":" https://grottesdevallorbe.ch/ ",
                   "location": {
                             "latitude":  46.69894084285282,
@@ -455,33 +458,26 @@ header {
 }
 #corps {
   background-color: #F4F0E9;
-  background-image: url('../assets/question/ligne.png');
-  background-size: cover;
+  background-image: url('../assets/Carte/ligne.png');
+  background-size: auto;
   background-repeat: repeat;
-  background-position: bottom;  
+  background-position: top;  
   padding: 20px;
   min-height: 95vh;
 }
 
   
-#mybuttonss {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width:70%;
-    margin: 0 auto;
-    padding: 0 20px;
-    margin: 20px 0px 25px 0px;
-  }
-
-
-.buttons {
+#mybuttonss{
   display: flex;
-  flex-direction: row;
+  width: 98%;
   justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 2rem;
+  align-items: center;
+  margin: 0px;
+  margin-top: 10px;
+  
 }
+
+
 
 #showmymatch {
   display: flex;
@@ -505,13 +501,71 @@ button {
 
 button:hover {
   opacity: 0.8; /* Effet d'interaction simple */
-  background-color: #008C6F; /* Ajustez la couleur du bouton selon votre design */
+  background-color: #000000; /* Ajustez la couleur du bouton selon votre design */
   color: white;
 }
 
 button:active {
   transform: scale(0.98); /* Effet d'interaction simple */
 }
+
+
+
+
+
+
+
+
+.theme-checkbox {
+  --toggle-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-width: 4.25em;
+  width: fit-content;
+  height: 2.125em;
+  background: linear-gradient(to right, #008C6F 50%, #008C6F 50%) no-repeat;
+  background-size: 205%;
+  background-position: 0;
+  transition: 0.6s;
+  transition: 0.6s;
+  border-radius: 99em;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--toggle-size);
+  margin: 7px;
+
+}
+
+.theme-checkbox::before {
+  content: "";
+  width: 1.45em;
+  height: 1.45em;
+  position: absolute;
+  top: 0.218em;
+  left: 0.438em;
+  background: linear-gradient(to right, #1c1c1c 50%, #f8f8f8 50%) no-repeat;  
+  background-size: 205%;
+  background-position: 100%;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border:2px solid #008C6F;
+
+}
+
+.theme-checkbox:checked::before {
+  left: calc(100% - 1.35em - 0.438em);
+  background-position: 0;
+}
+
+.theme-checkbox:checked {
+
+  background-position: 100%;
+}
+
+
 
 
 </style>

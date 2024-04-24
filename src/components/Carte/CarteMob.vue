@@ -23,7 +23,7 @@ export default {
         }
     },
     activeTags: [],
-   activities: [
+    activities:  [
                       { "name": "Bains thermaux d'Yverdon-les-Bains", 
                       "tags": ["detente", "loisirs", "nature"], 
                       "state": false,
@@ -75,7 +75,7 @@ export default {
                           
                           { "name": "Grottes de Vallorbe", "tags": ["aventure", "nature", "culture"], "state": false,
                         "description": "Découvrez les grottes de Vallorbe et leur univers souterrain.",
-                          "img":"maisond'ailleurs.jpg",
+                          "img":"grottevalorbe.jpeg",
                   "lien":" https://grottesdevallorbe.ch/ ",
                   "location": {
                             "latitude":  46.69894084285282,
@@ -291,7 +291,7 @@ export default {
               }
               }
 
-              ]
+              ],
     };
   },
 
@@ -309,42 +309,40 @@ export default {
                 }
 
                 console.log(this.activeTags);
+
                 return this.activities.filter(item => 
                     this.activeTags.some(tag => item.tags.includes(tag))
                 );
             }
 
-
-
         },
 
         mounted() {
-            this.map = L.map('map').setView([46.778559, 6.641183], 13);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors'
-            }).addTo(this.map);
-            this.updateMap(); 
-            const customIcon = L.icon({
-            iconUrl: markerIconUrl,
-            iconSize: [25, 25], // size of the icon
-            iconAnchor: [15, 15], // point of the icon which will correspond to marker's location
-            popupAnchor: [0, -15] // point from which the popup should open relative to the iconAnchor
-            });
+          this.initializeMap();
 
-            let filtrer = this.filteredActivities;
-            for (const activity of filtrer) {
-            const location = activity.location; // Accédez à l'objet location
-            L.marker([location.latitude, location.longitude], { icon: customIcon })
-                .addTo(this.map)
-                .bindPopup(activity.name); // Utilisez `activity.name` pour le nom
-            }
-            this.map.invalidateSize();
-
+          this.toggleTag('loisirs');
   },
 
     methods: {
     
-        updateMap() {
+      
+  initializeMap() {
+    this.map = L.map('map').setView([46.778559, 6.641183], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(this.map);
+
+    // Assurez-vous que la carte est prête
+    this.map.on('load', () => {
+      this.updateMap();
+    });
+  },
+  
+
+  updateMap() {
+    // Assurez-vous que la carte existe et est chargée
+    if (!this.map) return;
+
     this.map.eachLayer(layer => {
       if (layer instanceof L.Marker) {
         layer.remove();
@@ -353,9 +351,9 @@ export default {
 
     const customIcon = L.icon({
       iconUrl: markerIconUrl,
-      iconSize: [25, 25], // size of the icon
-      iconAnchor: [15, 15], // point of the icon which will correspond to marker's location
-      popupAnchor: [0, -15] // point from which the popup should open relative to the iconAnchor
+      iconSize: [15,15],
+      iconAnchor: [10, 10],
+      popupAnchor: [0, -10]
     });
 
     this.filteredActivities.forEach(activity => {
@@ -365,17 +363,25 @@ export default {
         .bindPopup(activity.name);
     });
 
-    this.map.invalidateSize();
+
+
+
   },
+
             
             toggleTag(tag) {
                 const index = this.activeTags.indexOf(tag);
                 if (index > -1) {
-                this.activeTags.splice(index, 1); // Remove tag from active filters
-                } else if (this.activeTags.length < 3) {
+                this.activeTags.splice(index, 1); 
+                } else if (this.activeTags.length < 4) {
                 this.activeTags.push(tag); // Add tag to active filters
+                } 
+                if (this.activeTags.length === 4) {
+                  this.activeTags.splice(0, 1); 
                 }
+             
                 this.updateMap(); // Update map every time the tags change
+                console.log("ici");
             },
 
             clearFilters() {
@@ -385,50 +391,47 @@ export default {
         </script>
 
         <template>
-        <div id="butonnn">
 
             <div id="categorie-filtres">
-        <div class="buttons">
-            <h2>Filtrer par catégories</h2>
-        </div> 
-        <div class="filters">
+
+        <div class="cfilters">
                                 <button 
                                 class="filter-button" 
                                 :class="{ 'active-filter': activeTags.includes('loisirs') }" 
                                 @click="toggleTag('loisirs')"> S'amuser</button>
-
                                 <button 
                                 class="filter-button" 
                                 :class="{ 'active-filter': activeTags.includes('sport') }" 
                                 @click="toggleTag('sport')">Activité physique</button>
-
                                 <button 
                                 class="filter-button" 
                                 :class="{ 'active-filter': activeTags.includes('nature') }" 
                                 @click="toggleTag('nature')">Temps pour soi</button>
-
                                 <button 
                                 class="filter-button" 
                                 :class="{ 'active-filter': activeTags.includes('culture') }" 
                                 @click="toggleTag('culture')">Cultiver la culture</button>
-
                                 <button 
                                 class="filter-button" 
                                 :class="{ 'active-filter': activeTags.includes('detente') }" 
                                 @click="toggleTag('detente')">Relaxation</button>
-
                                 <button 
                                 class="filter-button" 
                                 :class="{ 'active-filter': activeTags.includes('aventure') }" 
                                 @click="toggleTag('aventure')">Des aventures</button>
-
                                 <button 
-                                id="Mybutton" 
+                                id="Mylittlebutton" 
                                 @click="clearFilters">Supprimer</button>
 
         </div>
         </div>
-        </div>
+        
+      
+      
+      
+      
+      
+      
             
 
         <div id="map" ></div>
@@ -439,26 +442,25 @@ export default {
 #map {
     display: block;
     margin: 0 auto;
-    width: 100%;
-    min-height: 500px;
+    max-width: 100%;
+    min-height: 620px;
     overflow: hidden;
   height: auto;
+  padding: 10px 40px;
+ 
+ align-items: center;
+ box-shadow: 13px 12px 6px  rgba(0,0,0,0.2);
+ margin-bottom: 50px;
+ transition: box-shadow 0.9s ease; /* Ajouter la transition ici */
 }
 
 
 #map{
- 
- align-items: center;
- width: auto;
-
- box-shadow: 9px 8px 3px  rgba(0,0,0,0.2);
- margin-bottom: 50px;
- transition: box-shadow 0.9s ease; /* Ajouter la transition ici */
 
 }
 
 #map:hover{
- box-shadow: -6px 8px 5px rgb(112, 198, 106); /* Arrivée : ombre à gauche */
+ box-shadow: -14px 14px 10px #008C6F; /* Arrivée : ombre à gauche */
 }
 
 
@@ -478,39 +480,14 @@ export default {
 #categorie-filtres {
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: left;
-  width:100%;
+  align-items: center;
+  width: 92vw;  
   justify-content: space-around;
   margin-bottom:40px;
   gap: 20px;
+  padding-left: 40px;
 }
 
-#categorie-filtres h2 {
-  display: flex;
-  align-items: left;
-  justify-content: left;
- 
-}
-
-
-.filters{
-  width:100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-
-}
-
-.buttons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 2rem;
-}
 
 #showmymatch {
   display: flex;
@@ -524,38 +501,39 @@ export default {
 button {
   max-width: 140px;
   font-size: 12px;
-
+min-width: 140px;
   border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  background-color: #D9D9D9; /* Ajustez la couleur du bouton selon votre design */
+  padding: 10px 10px;
+  margin: 0px;
+
+  border-radius: 45px;
+  background-color: #f9f9f9; /* Ajustez la couleur du bouton selon votre design */
   color: black;
   cursor: pointer;
-  font-weight: bold;
-  transition: 0.8s;
+  font-weight: 700;
+  transition: 0.5s;
 }
 
-.filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    
-}
 
 #Mybutton {
-    max-height: 40px;
+  max-width: 100px;
+
+    max-height: 30px;
     padding: 10px;
 }
+
 .filter-button.active-filter {
     background-color: #008C6F; /* Green background when active */
     color: white;
+    font-size: 13px;
+
 }
 button:hover {
   opacity: 0.8; /* Effet d'interaction simple */
-  background-color: #008C6F; /* Ajustez la couleur du bouton selon votre design */
+  background-color: #1d977e; /* Ajustez la couleur du bouton selon votre design */
   color: white;
-  transform: scale(1.1);
-
+  transform: scale(1.05);
+border: 5px solid white;
 }
 
 button:active {
