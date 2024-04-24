@@ -169,9 +169,9 @@ max-width: 850px;
 width: 300px;
  max-width: 320px;
  height: fit-content;
- min-height: 420px;
- height: 340px;
- max-height: 390px;
+ min-height: 460px;
+ height: 240px;
+ max-height: 240px;
  background: rgb(0, 0, 0);
  border-radius: 5px;
  transition: all 0.32s;
@@ -249,13 +249,14 @@ width: 300px;
 
 
 .tagaff {
+  width: 100%;
   padding: 0px 0px;
   margin: 0px 0px;
 }
 
 
 .tagaff span{
-  margin: 0px 5px;
+  margin: 0px 0px 0px 5px;
   font-weight: 800;
   font-size: 12px;
 

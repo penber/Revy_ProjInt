@@ -56,6 +56,22 @@
 
 
 
+<div>
+
+<QuestionY 
+      @likedresults="showresult"  v-if="affiche==='question'"/>
+
+</div>
+
+<div v-if="affiche === 'tindrr'" id="showmymatch">
+<FilteredActivity :activities="datareceived" @liked="showmatch" />
+</div>
+
+<div v-if="affiche ==='resultats'">
+
+<VosActivite :actdata="datareceived" />      
+</div>
+
 
 
 
@@ -67,7 +83,9 @@
 </template>
 
 <script>
+import QuestionY from '../components/QuestionY.vue';
 import VosActivite from './VosActivite.vue';
+import FilteredActivity from '../components/FilteredActivity.vue';
 import NavBarr from '../components/NavBarr.vue';
 import tindrrBackground from '@/assets/tindrrfond.png';
 import CarteMob from '../components/Carte/CarteMob.vue';
@@ -77,8 +95,10 @@ import { RouterLink } from 'vue-router';
 export default {
     name: 'MeilleurYv',
     components: {
+      QuestionY,
       VosActivite,
       NavBarr,
+      FilteredActivity,
       CarteMob,
       RouterLink,
       RevyFooter
