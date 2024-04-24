@@ -148,7 +148,7 @@ button:active {
         background-color: #ffffff00;
         box-shadow: 0 0px 0px rgba(0,0,0,0.0);
         margin-bottom: 10px !important;
-        padding:10px;
+        padding:0px;
     }
 
 }

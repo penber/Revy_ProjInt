@@ -1,12 +1,16 @@
 <template>
   
   <div class="card">
-    <div class="card-image" :id="myData.name">
+    <div class="card-image" :id="myData.name" @click="redirectioninternet">
       <img :src="addimg" alt="Image Test">
     </div> 
     <div class="card-content">
 
-      <h3>{{myData.name}}</h3>
+      <div id="hautcard">
+        <h3>{{myData.name}}</h3>
+        <button @click="redirectioninternet" class="redirectbtn"></button>
+
+      </div>
       <p>{{myData.description}}</p>
 
       <div  class="tagaff">
@@ -45,7 +49,12 @@ export default {
 
   mounted() {
     console.log("actdata:", this.myData);
-  }
+  },
+  methods: {
+    redirectioninternet() {
+      window.open(this.myData.lien, '_blank');
+    }
+  } 
 }
 </script>
 
@@ -120,10 +129,15 @@ max-width: 850px;
 }
 
 .card-content h3 {
+  display: flex;
   margin-top: 0;
   color: white;
   max-width: 90%;
   padding-right: 15px;
+  max-width: 80%;
+  align-items: center;
+  margin-bottom: 0px;
+
 }
 
 .card-content p {
@@ -131,6 +145,39 @@ max-width: 850px;
   font-size: 13px;
   line-height: 1.6;
   padding-right: 22px;
+
+}
+
+
+#hautcard {
+  display: flex;
+width: 98%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5px;
+}
+
+
+
+.redirectbtn {
+  min-width: 20px;
+  min-height: 20px;
+  margin-right: 15px;
+background-image: url('@/assets/Icons/rediriger.png');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-color: #ffffff00;
+box-shadow: none;
+border: none;
+padding: 0px;
+}
+
+.redirectbtn:hover {
+scale: 1.02;
+
+background-color: #ffffff00;
 
 }
 
@@ -214,6 +261,8 @@ width: 300px;
 }
 
 
+
+
 .card-content {
   display: flex;
   justify-content: space-around;
@@ -224,7 +273,7 @@ width: 300px;
   overflow: hidden;
   min-height: 50%;
   max-height: 150px !important;
-  min-width: 90%;
+  min-width: 93%;
   max-width: 100%;
 }
 
@@ -232,8 +281,20 @@ width: 300px;
   margin-top: 0;
   margin-bottom: 0px;
   color: #fafafa;
-  font-size: 24px;
+  font-size: 20px;
   margin:0;
+  padding: 0px;
+  max-width: 80%;
+  text-align: left;
+}
+
+
+#hautcard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5px;
 }
 
 .card-content p {
@@ -241,17 +302,29 @@ width: 300px;
   font-size: 14px;
   text-align: justify;
   line-height: 1.6;
-  padding: 0px 10px;
+  padding: 0px 5px;
   margin:0;
 
 }
  
 
 
+
+.redirectbtn {
+  min-width: 22px;
+  min-height: 22px;
+  width: 22px;
+  height: 22px;
+  margin:0px;
+}
+
+
 .tagaff {
   width: 100%;
   padding: 0px 0px;
   margin: 0px 0px;
+  align-items: end;
+  justify-content: end;
 }
 
 
