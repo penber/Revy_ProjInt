@@ -71,7 +71,7 @@ export default {
 
 #microtot-texte {
   order: 2; 
-  padding: 0px 80px;
+  padding: 0px 90px;
   display: flex;
   height:50vh;
 max-width: 55%;

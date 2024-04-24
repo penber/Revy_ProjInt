@@ -60,16 +60,19 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
- 
+
         width: 100%;
         background-color: #ffffff00;
         box-shadow: 0 0px 0px rgba(0,0,0,0.0);
         margin-bottom: 50px;
         padding:10px;
     }
-   #filtres h1 {
-        margin: 25px 0px;}
+ 
 
+
+    #filtres h3 {
+        margin: 25px 0px;
+      }
 
         
 
@@ -186,6 +189,13 @@ button:hover {
 border: 5px solid white;
 }
 
+
+#filtres h3 {
+
+display: flex;
+flex-direction: row;
+align-items: left;
+}
 
 }
 

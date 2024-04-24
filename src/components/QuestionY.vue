@@ -177,6 +177,7 @@
                               "tags": ["famille", "éducation", "loisirs"], "state": false ,
                   "img":"explorit.jpg",
                   "lien":" https://explorit.ch/",
+                        "description": "Centre de loisirs et de découvertes pour toute la famille." ,
                   "location": {
                             "latitude":  46.76620899850472,
                             "longitude": 6.643061183339376

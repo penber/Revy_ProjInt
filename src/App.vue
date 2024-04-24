@@ -8,7 +8,17 @@
 <script>
 
 export default {
+
+
   name: 'App',
+  head: {
+       link: [
+             {
+                 rel: "icon",
+                 href: require("./assets/logo-blanc.png")
+             },
+          ]
+       },
   data() {
     return {
       message: 'Hello, Vue!',

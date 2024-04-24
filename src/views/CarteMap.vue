@@ -210,6 +210,7 @@ export default {
                   "img":"explorit.jpg",
                   "description": "Découvrez les sciences et la technologie de manière ludique et interactive.",
                   "lien":" https://explorit.ch/",
+                  
                   "location": {
                             "latitude":  46.76620899850472,
                             "longitude": 6.643061183339376

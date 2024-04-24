@@ -125,7 +125,7 @@ export default {
   .tindrrre {
     max-width: 100%;
     align-items: center; 
-    margin-bottom: 40px; /* Utilise toute la largeur disponible */
+    margin-bottom: 70px; /* Utilise toute la largeur disponible */
   }
 
   .tindrr-text  {
@@ -143,7 +143,9 @@ export default {
     font-size: 1.1em; 
     width:90%; /* Réduit la taille de la police pour le texte sur les petits écrans */
   }
-
+  .tindrr-img {
+    margin-bottom: 30px;
+  }
   .tindrr-img img {
     max-width: 90%;  /* Ajuste la largeur de l'image pour qu'elle s'adapte à la largeur de l'écran */
     height: auto;     /* Garde le ratio hauteur/largeur de l'image */

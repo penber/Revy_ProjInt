@@ -127,6 +127,7 @@ export default {
                               "tags": ["famille", "éducation", "loisirs"], "state": false ,
                   "img":"explorit.jpg",
                   "lien":" https://explorit.ch/",
+                        "description": "Découvrez des expositions interactives et ludiques pour toute la famille.",
                   "location": {
                             "latitude":  46.76620899850472,
                             "longitude": 6.643061183339376
@@ -526,17 +527,12 @@ button:active {
   }
 
   #map {
-    display: block;
-    margin: 0 auto;
+    
     max-width: 80%;
-    min-height: 620px;
-    overflow: hidden;
-  height: auto;
+    min-height: 420px;
+    
  padding: 0px 15px;
- align-items: center;
- box-shadow: 13px 12px 6px  rgba(0,0,0,0.2);
- margin-bottom: 50px;
- transition: box-shadow 0.9s ease; /* Ajouter la transition ici */
+ 
 }
 
 }
