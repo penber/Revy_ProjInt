@@ -1,19 +1,20 @@
 <template>
   
-  <div class="carder">
-    <div class="carder-image" :id="myData.name">
+  <div class="card">
+    <div class="card-image" :id="myData.name">
       <img :src="addimg" alt="Image Test">
     </div> 
-    <div class="carder-content">
+    <div class="card-content">
+
       <h3>{{myData.name}}</h3>
       <p>{{myData.description}}</p>
-      
+
       <div  class="tagaff">
         <span  v-for="(tag, index) in myData.tags" :key="index">{{ tag }}</span>
       </div>
-    </div>
   </div>
-  
+
+  </div>
 
 
   </template>
@@ -25,7 +26,7 @@
 
 <script>
 export default {
-  name: 'ActCard',
+  name: 'NewCard',
 
   props: {
     myData: Object
@@ -52,76 +53,112 @@ export default {
 <style>
 
 
-.carder {
+.card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   cursor: pointer;
-  widows: auto;
-width: 250px;
- max-width: 450px;
+width: 620px; 
+max-width: 850px;
  height: fit-content;
- min-height: 340px;
- height: 340px;
+ max-height: 220px;
+ height: 220px;
  max-height: 340px;
- background: rgb(255, 255, 255);
+ background: rgb(0, 0, 0);
  border-radius: 5px;
+ border: 1px solid rgba(0, 0, 255, .2);
  transition: all 0.32s;
  box-shadow: 10px 10px 2px 1px #304E8D;
  overflow: hidden;
- 
 }
 
-.carder:hover {
+.card:hover {
  box-shadow: -12px 12px 2px -1px #008C6F;
 }
 
-.carder-image {
-  width: 100%;     
-  height: 150px;   
-  max-height: 150px;    
+.card-image {
+  min-width: 50%;
+  width: 50%;     
+  height: 0;  ;    
   padding-top: 70%;
   position: relative;  
   overflow: hidden;    
 }
 
-.carder-image img {
+.card-image img {
   position: absolute; 
-  top: 50%;           
+  top: 40%;           
   left: 50%;          
   transform: translate(-50%, -50%); 
-  width: 100%;         
+  min-width: 50%;         
+  height: auto;        
   min-height: 100%;    
   object-fit: cover;   
 }
 
-.carder-image img {
+.card-image img {
   width: 100%;
   height:auto; 
   object-fit: cover;
 }
 
 
-.carder-content {
-  padding: 12px;
-  padding-top:15px;
-  background: #fff;
+.card-content {
+  display: flex;
+  width: 50%;
+  min-width: 50%;
+  flex-direction: column;
+  text-align: justify;
+  justify-content: space-between;
+  align-items: start;
+  padding: 22px;
+  padding-top:20px;
+  background: #000000;
   overflow: hidden;
   min-height: 50%;
+  color: white;
 }
 
-.carder-content h3 {
+.card-content h3 {
   margin-top: 0;
-  color: #333;
+  color: white;
+  max-width: 90%;
+  padding-right: 15px;
 }
 
-.carder-content p {
-  color: #666;
-  font-size: 12px;
-  text-align: justify;
+.card-content p {
+  color: white;
+  font-size: 13px;
   line-height: 1.6;
-  padding: 0px 10px;
+  padding-right: 22px;
+
 }
- 
+
+
+.tagaff {
+  width:90%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: row;
+  padding: 5px 10px;
+  margin: 5px 5px;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+.tagaff span{
+  margin: 5px 5px;
+  font-weight: 900;
+}
+
+@media (min-width: 368px) and (max-width: 1024px) {
+    .card {
+      
+    }
+}
 
 </style>

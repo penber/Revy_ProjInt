@@ -50,7 +50,7 @@
           <div id="conteneurquiz">
 
         <QuestionY 
-        @likedresults="showresult"  v-if="affiche==='question'"/>
+                  @likedresults="showresult"  v-if="affiche==='question'"/>
 
         </div>
 
@@ -63,11 +63,8 @@
           <section >
 
 <div class="titrecarte">
-          <h1>On a trouver vos match !</h1>
-          <p>Bravo pour ton match avec les activités d'Yverdon ! 
-            Lance-toi et explore les coins cachés pour transformer 
-            ton expérience urbaine en aventure inoubliable.</p>
-          <p> Découvre les lieux qui feront de chaque moment une découverte exceptionnelle. Bonne exploration !  </p>
+          <h1>Tes petits coins parfaits !</h1>
+          <p>Selon tes goûts, voici la liste des activités qui vont te rendre fou/folle de joie !</p>
         </div>
 
         <div>
@@ -497,6 +494,10 @@ export default {
   padding:10px;
 
 }
+
+
+
+
 #filtres {
           display: flex;
           flex-direction: column;

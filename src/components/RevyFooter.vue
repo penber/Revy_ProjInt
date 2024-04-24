@@ -13,9 +13,9 @@
     </ul>
   </div>
   <div class="footer-section">
-    <h4>Bien y vivre</h4>
+    <h4>YverCarte</h4>
     <ul class="footer-links">
-      <li><RouterLink to="/Accueil">Accueil</RouterLink></li>
+      <li><RouterLink to="/Accueil">Carte</RouterLink></li>
     </ul>
   </div>
 

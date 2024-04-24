@@ -402,7 +402,7 @@ export default {
                                 <button 
                                 class="filter-button" 
                                 :class="{ 'active-filter': activeTags.includes('sport') }" 
-                                @click="toggleTag('sport')">Activité physique</button>
+                                @click="toggleTag('sport')">Santé physique</button>
                                 <button 
                                 class="filter-button" 
                                 :class="{ 'active-filter': activeTags.includes('nature') }" 
@@ -418,7 +418,7 @@ export default {
                                 <button 
                                 class="filter-button" 
                                 :class="{ 'active-filter': activeTags.includes('aventure') }" 
-                                @click="toggleTag('aventure')">Des aventures</button>
+                                @click="toggleTag('aventure')">Communauté</button>
                                 <button 
                                 id="Mylittlebutton" 
                                 @click="clearFilters">Supprimer</button>

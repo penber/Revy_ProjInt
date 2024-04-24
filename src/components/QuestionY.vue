@@ -44,7 +44,7 @@
      <div id="askbuttons">
       <button @click="restartQuiz" id="Mybutton" >Recommencer</button>
 
-      <button @click="nextQuestion" id="Mybutton"  v-if="currentQuestion < questions.length - 1" class="quizbtn">Suivant</button>
+      <button @click="nextQuestion" id="Mylittlebutton"  v-if="currentQuestion < questions.length - 1" class="quizbtn">Suivant</button>
 
 
 
@@ -352,15 +352,19 @@
         };
     },
     computed: {
-      filteredActivities() {
-        return this.activities.filter((activity) => {
-          const scores = activity.tags.map(tag => this.tagsScores[tag]);
-          const average = scores.reduce((a, b) => a + b, 0) / scores.length; // Calculer la moyenne des scores pour chaque activité 
-          console.log("moyenne:"+average)
-          return average > 2; 
-        }).slice(0, 12); 
-      }
-    },
+  filteredActivities() {
+    return this.activities
+      .filter((activity) => {
+        const randomFactor = 0.95 + Math.random() * 0.1; 
+        const scores = activity.tags.map(tag =>( this.tagsScores[tag] || 0) * randomFactor);
+        const average = scores.reduce((a, b) => a + b, 0) / scores.length;
+        return average > 2;
+      })
+      .sort(() => 0.5 - Math.random()) // Ajoute un tri aléatoire
+      .slice(0, 12);
+  }
+},
+
     methods: {
 
       selectAnswer(answer) {

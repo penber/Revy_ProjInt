@@ -223,14 +223,16 @@ background-repeat: no-repeat;
 background-position: center;
 background-color: #66666600;
 padding: 0px;
+margin-left: 8px;
 padding-bottom: 0px;
 
 }
 
 #jaimepo {
-  min-width: 80px;
-  min-height: 80px;
+  min-width: 60px;
+  min-height: 60px;
   border-radius: 20%;
+  margin-right: 15px;
 background-image: url('@/assets/Icons/dislike.png');
 background-size: cover;
 background-position: center;

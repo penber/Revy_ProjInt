@@ -10,7 +10,8 @@
             
             <h1>Bienvenue à Yverdon</h1>
 
-            <p>Yverdon-les-Bains est une ville suisse située dans le canton de Vaud, au bord du lac de Neuchâtel.</p>
+            <p>Découvrez notre belle ville et
+               plongez-vous dans son atmosphère enrichissante et multiculturelle !</p>
 
            
 

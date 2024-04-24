@@ -8,13 +8,14 @@
         </div>
         <div id="Titre2">
           <div>
-            <p>Découvrez toutes les activités de Yverdon-les-Bains ! Que vous cherchiez des musées, des restaurants, des événements culturels ou des activités de plein air, notre site est là pour vous guider et vous permettre de profiter pleinement de tout ce que notre ville a à offrir.</p>
+            <p>Plonge dans le tourbillon d'activités à Yverdon-les-Bains ! Que tu sois en quête de musées, de restos délicieux, de festivals culturels ou de frissons en plein air, 
+              notre site est ton complice pour explorer et savourer chaque instant dans notre ville !</p>
           </div>
         </div>
       </div>
       <div class="content-container">
         <img src="@/assets/Accueil/soiree.png" alt="Soirée à Yverdon-les-Bains">
-        <img src="@/assets/Accueil/trouvparcour.png" alt="Trouver votre parcours">
+        <img src="@/assets/Accueil/trouvparcour2.png" alt="Trouver votre parcours">
         <img src="@/assets/Accueil/velo.png" alt="Circuit vélo">
         <img src="@/assets/Accueil/toutage.png" alt="Activités pour tous les âges">
       </div>
@@ -123,14 +124,14 @@ text-align: left;
 .content-container img {
   max-width: 20vw;           /* Ensures images do not exceed the width of their container */
   height: auto;              /* Maintains the aspect ratio of the images */
-  transition: 0.8s ease-in-out;
+  transition: 0.6s ease-in-out;
 
 }
 
 
   
 .content-container img:hover {
-transform: scale(1.1);    
+transform: scale(1.06);    
 /*transform: translate(10px,4px);  */
     }
 

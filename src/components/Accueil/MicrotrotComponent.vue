@@ -3,11 +3,7 @@
 <div id="microtrot">
 <!-- Cette div contient deux div une avec une video et une autre avec un titre et description -->
 <div id="microtot-texte" class="tindrr-text">
-  <h2>"Yverdon-les-bain c'est...?" </h2>
-  <p>
-    Notre mission est de promouvoir la ville d'Yverdon-les-Bains en tant que destination de bien-être. Nous croyons que cette ville a un potentiel unique et nous travaillons à mettre en valeur ses qualités uniques.
-  </p>
-
+  <h2>“Yverdon-les-Bains, c'est une ville souvent sous-estimée. ” </h2>
 </div>
 
 
@@ -52,6 +48,7 @@ export default {
   color: #012142; /* Couleur bleue pour le titre */
   margin:0px;
   padding: 0;
+  font-size: 2.6em;
   
 }
 
@@ -65,10 +62,10 @@ export default {
 
 #microtot-texte {
   order: 2; 
-  padding-left: 80px;
+  padding: 0px 80px;
   display: flex;
   height:50vh;
-
+max-width: 55%;
   flex-direction: column;
   justify-content: center;
   z-index: 1;

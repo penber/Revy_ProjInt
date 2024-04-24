@@ -14,7 +14,7 @@
 
   </div>
   
-    <router-link id="Mybutton" to="/MeilleurYv">Commencer</router-link>
+    <router-link id="Mybutton" to="/MeilleurYv">Test</router-link>
 </div>
 
 <div class="tindrr-img">
@@ -101,11 +101,11 @@ export default {
 
 .tindrr-img img{
   width:100%;
-  transition: 0.8s ease-in;
+  transition: 0.6s ease-in;
 }
 
 .tindrr-img img:hover {
-  transform: scale(1.07) rotate(4deg);
+  transform: scale(1.04) rotate(2deg);
   }
 
 

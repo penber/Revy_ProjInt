@@ -208,6 +208,7 @@ export default {
                           { "name": "EXPLORiT Loisirs & Découvertes", 
                               "tags": ["famille", "éducation", "loisirs"], "state": false ,
                   "img":"explorit.jpg",
+                  "description": "Découvrez les sciences et la technologie de manière ludique et interactive.",
                   "lien":" https://explorit.ch/",
                   "location": {
                             "latitude":  46.76620899850472,
@@ -389,15 +390,6 @@ export default {
   mounted() {
     this.$emit('update:showNavBar', false);
 
- //   this.map = L.map('map').setView([46.778559, 6.641183], 13);
-   // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  //    attribution: '© OpenStreetMap contributors'
-   // }).addTo(this.map);
-
-    //for (const [name, location] of Object.entries(this.locations)) {
-      //L.marker([location.latitude, location.longitude]).addTo(this.map)
-     //   .bindPopup(name); 
-    //}
 
   },
   unmounted() {
@@ -524,7 +516,7 @@ button:active {
   min-width: 4.25em;
   width: fit-content;
   height: 2.125em;
-  background: linear-gradient(to right, #008C6F 50%, #008C6F 50%) no-repeat;
+  background: linear-gradient(to right, #008C6F 50%, #ffffff 50%) no-repeat;
   background-size: 205%;
   background-position: 0;
   transition: 0.6s;

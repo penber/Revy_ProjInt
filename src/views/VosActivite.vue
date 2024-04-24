@@ -41,7 +41,8 @@
    
 
 <div id="listeact">
-      <ActCard class="Onecard" v-for="data in filteredActivities" :key="data.name" :myData="data"/>
+      <!-- <ActCard class="Onecard" v-for="data in filteredActivities" :key="data.name" :myData="data"/> -->
+        <NewCard class="Onecard" v-for="data in filteredActivities" :key="data.name" :myData="data"/>
   </div>
 
 
@@ -52,12 +53,14 @@
 </template>
 
 <script>
-import ActCard from '../components/ActCard.vue';
+// import ActCard from '../components/ActCard.vue';
+import NewCard from '../components/NewCard.vue';
 
 export default {
   name: 'VosActivite',
   components: {
-      ActCard
+    //   ActCard,
+      NewCard
   },
   props: {
       actdata: Array
@@ -80,11 +83,16 @@ export default {
   methods: {
       toggleTag(tag) {
           const index = this.activeTags.indexOf(tag);
+          if (this.activeTags.length === 4) {
+                  this.activeTags.splice(0, 1); 
+                }
+                
           if (index > -1) {
               this.activeTags.splice(index, 1);  // Remove tag from active filters
           } else if (this.activeTags.length < 3) {
               this.activeTags.push(tag);  // Add tag to active filters
           }
+       
       },
       clearFilters() {
           this.activeTags = [];  // Clear all filters
@@ -243,14 +251,16 @@ button:active {
   }
   
   .Onecard {
-    flex: 1 1 22%;
-    justify-content: space-between;
-    margin: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    min-width: 200px;
+    flex: 1 1 auto;
+    justify-content: center;
+    margin: 15px;
+    box-shadow: 10px 6px 2px #304d8d8c;
+    min-width: 250px;
+    border:none;
+    border-radius: 10px;
   }
   .Onecard:hover {
-    box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, .2);
+    box-shadow: -8px 12px 2px -1px #008C6F;
        }
 
   
