@@ -7,14 +7,14 @@
 <div class="tindrrre">
 
   <div class="tindrr-text">
-    <h2>Quels activitées vous coorespondent le mieux ?</h2>
+    <h2>Quelle activité te correspondrait le mieux ?</h2>
 
   <p> Découvre quelle activité te correspond 
     le mieux à Yverdon-les-Bains en faisant un test ludique et rapide ! </p>
 
   </div>
   
-    <router-link id="Mybutton" to="/MeilleurYv">Test</router-link>
+    <router-link id="Mybutton" to="/MeilleurYv">C'est parti pour le test !</router-link>
 </div>
 
 <div class="tindrr-img">

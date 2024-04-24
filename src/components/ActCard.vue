@@ -58,12 +58,12 @@ export default {
   justify-content: space-around;
   cursor: pointer;
   widows: auto;
-width: 250px;
- max-width: 450px;
+width: 300px;
+ max-width: 320px;
  height: fit-content;
- min-height: 340px;
+ min-height: 380px;
  height: 340px;
- max-height: 340px;
+ max-height: 390px;
  background: rgb(255, 255, 255);
  border-radius: 5px;
  transition: all 0.32s;
@@ -113,11 +113,12 @@ width: 250px;
 .carder-content h3 {
   margin-top: 0;
   color: #333;
+  font-size: 24px;
 }
 
 .carder-content p {
   color: #666;
-  font-size: 12px;
+  font-size: 14px;
   text-align: justify;
   line-height: 1.6;
   padding: 0px 10px;

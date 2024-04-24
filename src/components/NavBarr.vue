@@ -7,7 +7,7 @@
     <nav id="main-nav">
 
     <div>
-  <RouterLink to="/Accueil"> <img id="logo" alt="Revy logo" src="../assets/logo-noir.png"></RouterLink>
+  <RouterLink to="/Accueil"> <img id="logo" alt="Revy logo" src="../assets/logo-noire.png"></RouterLink>
       </div>
 
       <div id="nav-items">
@@ -25,7 +25,7 @@
     <nav id="main-nav">
 
 <div>
-<RouterLink to="/Accueil"> <img id="logo" alt="Revy logo" src="../assets/logo-noir.png"></RouterLink>
+<RouterLink to="/Accueil"> <img id="logo" alt="Revy logo" src="../assets/logo-noire.png"></RouterLink>
   </div>
 
   <div id="nav-items">
@@ -43,7 +43,7 @@
     <nav id="main-nav" >
 
 <div>
-<RouterLink to="/Accueil"> <img id="logo" alt="Revy logo" src="../assets/logo-blanc.png"></RouterLink>
+<RouterLink to="/Accueil"> <img id="logo" alt="Revy logo" src="../assets/logo-blance.png"></RouterLink>
   </div>
 
   <div id="nav-items">

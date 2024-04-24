@@ -143,9 +143,9 @@ export default {
 
 #texttindrr h1 {
   width: 80%;
-  font-size: 2.6em;
+  font-size: 2.4em;
   color: #333;
-  margin-bottom:0px;
+  margin:0px;
 }
 
 #texttindrr p {

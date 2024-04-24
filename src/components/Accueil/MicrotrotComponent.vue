@@ -8,7 +8,11 @@
 
 
 <div id="microtot-img">
-  <img src="@/assets/Accueil/lac.jpeg" alt="ligne de trajet">¨
+  <!-- une video-->
+
+  <video width="320" height="240" controls>
+    <source src="@/assets/Accueil/Mictrottoir.mp4" type="video/mp4">
+  </video>
 </div>
 
 </div>
@@ -40,6 +44,7 @@ export default {
   align-items: center;
   max-width: 100%;
   margin: 0px auto;
+  margin-bottom: 80px;
 }
 
 
@@ -84,7 +89,7 @@ max-width: 55%;
   text-align: center;
 }
 
-#microtot-img img {
+#microtot-img video {
   max-width: 100%;
   height: auto; 
 }

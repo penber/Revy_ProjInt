@@ -9,7 +9,7 @@
   <div class="footer-section">
     <h4>YverMatchmaking</h4>
     <ul class="footer-links">
-      <li><RouterLink to="/MeilleurYv">Faire le test</RouterLink></li>
+      <li><RouterLink to="/MeilleurYv">Test</RouterLink></li>
     </ul>
   </div>
   <div class="footer-section">
@@ -89,6 +89,11 @@ export default {
 .footer-links li {
   color : white;
   margin-bottom: 10px;
+}
+
+.footer-links li:hover {
+ scale: 1.1;
+ font-weight: bold;
 }
 
 .footer-links li a{

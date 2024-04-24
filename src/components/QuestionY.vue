@@ -21,7 +21,7 @@
                 <button id="choisebtn" v-for="score in 5" :key="score" @click="selectAnswer(score)"></button>
               </div>
               <div id="choise-labels">
-                  <span>Pas grâve</span>
+                  <span>Pas grave</span>
                   <span>Neutre</span>
                   <span>Important</span>
                 </div>
@@ -417,7 +417,7 @@
  display: flex;
   flex-direction: column;
   justify-content: space-around;
-
+  align-items: center;
   margin: auto;
   border-radius: 10px;
 }
@@ -428,7 +428,7 @@
   align-items: center;
   justify-content: space-around;
   height: 100%;
-  padding: 10px 50px
+  padding: 10px 50px 0px 50px;
 }
 
 
@@ -485,12 +485,13 @@
   display: flex;
   flex-direction: column;
   padding: 10px 120px;
+  margin-bottom: 20px;
 }
 
 #titreaccroche h3 {
   font-size: 2.1em;
   text-align: left;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 #questionstext p {
@@ -508,6 +509,7 @@
   margin-top: 70px;
   border-radius: 10px;
   overflow: hidden; 
+  margin-bottom: 10px;
 }
 
 .rectangle-container {
@@ -525,12 +527,15 @@
 
 #askbuttons {
   display: flex;
+  max-width: 90%;
+  min-width: 85%;
   flex-direction: row;
   justify-content: space-between;
   padding:0px 20px;
 }
 
 .quizbtn{
+  min-width: 130px;
   font-size: 1.2em;
   background-color: #304E8D;
   color: #fff;

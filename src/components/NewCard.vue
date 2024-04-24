@@ -68,12 +68,12 @@ max-width: 850px;
  border-radius: 5px;
  border: 1px solid rgba(0, 0, 255, .2);
  transition: all 0.32s;
- box-shadow: 10px 10px 2px 1px #304E8D;
+ box-shadow: 7px 7px 6px  #304E8D;
  overflow: hidden;
 }
 
 .card:hover {
- box-shadow: -12px 12px 2px -1px #008C6F;
+ box-shadow: -7px 7px 1px  #008C6F;
 }
 
 .card-image {
@@ -152,7 +152,11 @@ max-width: 850px;
 
 .tagaff span{
   margin: 5px 5px;
-  font-weight: 900;
+  font-weight: 800;
+  font-size: 12px;
+
+  text-transform: uppercase;
+
 }
 
 @media (min-width: 368px) and (max-width: 1024px) {

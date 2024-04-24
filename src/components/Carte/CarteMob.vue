@@ -460,7 +460,7 @@ export default {
 }
 
 #map:hover{
- box-shadow: -14px 14px 10px #008C6F; /* Arrivée : ombre à gauche */
+ box-shadow: -9px 9px 2px #008C6F; /* Arrivée : ombre à gauche */
 }
 
 

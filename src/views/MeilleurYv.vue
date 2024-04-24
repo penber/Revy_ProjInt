@@ -535,14 +535,14 @@ export default {
 
   #Mybutton {
     width: 100%;
-    max-width: 200px;
+    max-width: 220px;
         padding: 1em 2em;
         font-size: 12px;
         text-transform: uppercase;
-        letter-spacing: 2.5px;
+        letter-spacing: 1.95px;
         font-weight: 500;
-        color: #000;
-        background-color: #fff;
+        color: #ffffff;
+        background-color: #304E8D;
         border: none;
         border-radius: 45px;
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
