@@ -212,7 +212,7 @@ background-color: #ffffff00;
   scale: 1.05;
 }
 
-@media (min-width: 368px) and (max-width: 1024px) {
+@media (min-width: 150px) and (max-width: 1114px) {
     .card {
       display: flex;
   flex-direction: column;
