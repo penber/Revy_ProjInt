@@ -589,7 +589,7 @@
   #titreaccroche h3 {
   font-size: 1.4em;
   text-align: left;
-  margin-bottom: 65px;
+  margin-bottom: 50px;
   margin-top: 0px;
   font-weight: 900;
   text-align: left;
