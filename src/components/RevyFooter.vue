@@ -26,8 +26,8 @@
     <a href="https://www.tiktok.com/" target="_blank">
         <img src="../assets/Icons/tiktok.png" alt="Tik-tiok">
     </a>
-    <a href="https://www.instagram.com/yourprofile" target="_blank">
-        <img src="../assets/Icons/Group 87.svg" alt="Instagram">
+    <a href="https://www.instagram.com/" target="_blank">
+        <img src="../assets/Icons/Group 88.svg" alt="Instagram">
     </a>
 </div>
 
