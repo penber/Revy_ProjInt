@@ -271,16 +271,16 @@ width: 300px;
 
 .card-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 0px 10px 10px 10px !important;
+  padding: 15px 10px 20px 14px !important;
   padding-top:15px;
   background: #000000;
   overflow: hidden;
   min-height: 50%;
-  max-height: 150px !important;
-  min-width: 93%;
-  max-width: 100%;
+  max-height: 95%;
+  min-width: 90%;
+  max-width: 90%;
 }
 
 .card-content h3 {

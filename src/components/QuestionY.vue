@@ -632,7 +632,7 @@
    min-width: 340px;
    max-width: 95%!important;
    justify-content: center;
-  padding: 0;
+   padding: 0px 15px;
   margin-bottom: 10px;
   margin-top: 20px
 }
@@ -649,6 +649,7 @@ margin-bottom: 20px;
 #echellesavancer p{
 margin-top:2px;
 margin-bottom: 37px;
+
 }
 
 #choise-container {
@@ -656,15 +657,15 @@ margin-bottom: 37px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  justify-content: space-around;
+  margin-bottom: 5px;
 } 
 
 #choise-labels {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  width: 95%;
   padding: 10px 0;
 margin-bottom: 15px;
   font-weight: 500;
@@ -673,8 +674,8 @@ margin-bottom: 15px;
 }
 
 #choisebtn {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   max-width: 80px;
   max-height: 80px;
   border-radius: 50px;

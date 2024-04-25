@@ -280,22 +280,23 @@ scale:1.1
 #vote{
   justify-content: center;
   align-items: center;
+  margin: 0px;
 }
 
 
 
 
 #jaimepo {
-  min-width: 50px;
-  min-height: 50px;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 20%;
   margin-right: 0px;
 
 }
 
 #jaime {
-  min-width: 50px;
-  min-height: 50px;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 50%;
   margin-left: 0px;
 }   

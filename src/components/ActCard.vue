@@ -142,11 +142,11 @@ width: 300px;
   justify-content: space-around;
   cursor: pointer;
   widows: auto;
-width: 220px;
+width: 200px;
  max-width: 320px;
  height: fit-content;
- min-height: 340px;
- height: 340px;
+ min-height: 310px;
+ height: 280px;
  max-height: 390px;
  background: rgb(255, 255, 255);
  border-radius: 5px;
@@ -159,7 +159,22 @@ width: 220px;
   margin-top: 0;
   color: #333;
   font-size: 20px;
+  margin-bottom: 0px;
+ 
+}
 
+
+.carder-content p{
+  margin-top: 10px;
+
+ 
+}
+
+
+.carder-content {
+ padding-top: 5px;
+  max-height: fit-content;
+height: fit-content;
 }
 }
 

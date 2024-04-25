@@ -128,14 +128,14 @@ width: 100%;
   max-width: 100%;
   text-align: left;
   height: 35vh;
-  margin: 42px 0px;
+  margin: 23px 0px;
 }
 
   
 #microtot-texte h2{
 width: 100%;
-  padding: 0px 40px;
-  max-width: 80%;
+  padding: 0px 30px;
+  max-width: 85%;
   text-align: left;
   font-size: 24px
 }
