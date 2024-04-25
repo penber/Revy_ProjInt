@@ -26,7 +26,7 @@
     <a href="https://www.tiktok.com/" target="_blank">
         <img src="../assets/Icons/tiktok.png" alt="Tik-tiok">
     </a>
-    <a href="https://www.instagram.com/" target="_blank">
+    <a href="https://www.instagram.com/revy_yverdon?igsh=dmhpdGRsbnExZWhq&utm_source=qr" target="_blank">
         <img src="../assets/Icons/Group 88.svg" alt="Instagram">
     </a>
 </div>
