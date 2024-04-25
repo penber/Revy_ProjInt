@@ -587,9 +587,9 @@
   }
 
   #titreaccroche h3 {
-  font-size: 1.1em;
+  font-size: 0.95em;
   text-align: left;
-  margin-bottom: 28px;
+  margin-bottom: 45px;
   margin-top: 0px;
   font-weight: 900;
   text-align: justify;
@@ -598,10 +598,10 @@
 }
     
 #questionstext p {
-  font-size: 1.15em;
+  font-size: 1.25em;
   text-align: left;
   margin-left: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 15px;
   margin-top: 0px;
 }
 
@@ -609,6 +609,7 @@
 #questionstext{
   padding: 20px;
   padding-top: 0px;
+  padding-bottom: 5px;
   margin-bottom: 0px;
 }
 
@@ -647,7 +648,7 @@ margin-bottom: 20px;
 
 #echellesavancer p{
 margin-top:2px;
-margin-bottom: 30px;
+margin-bottom: 37px;
 }
 
 #choise-container {
@@ -656,6 +657,7 @@ margin-bottom: 30px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 10px;
 } 
 
 #choise-labels {
@@ -664,8 +666,8 @@ margin-bottom: 30px;
   justify-content: space-between;
   width: 100%;
   padding: 10px 0;
-margin-bottom: 30px;
-  font-weight: 700;
+margin-bottom: 15px;
+  font-weight: 500;
   font-size: 1em;
 
 }
