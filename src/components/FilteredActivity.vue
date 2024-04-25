@@ -277,10 +277,17 @@ scale:1.1
   font-size: 1.5em;
 }
 
+#texttindrr {
+
+margin: 0px;
+margin-bottom: 10px;
+margin-top: 13px;}
+
 #vote{
   justify-content: center;
   align-items: center;
   margin: 0px;
+  margin-bottom: 30px;
 }
 
 

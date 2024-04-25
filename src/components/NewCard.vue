@@ -273,7 +273,7 @@ width: 300px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 10px 20px 14px !important;
+  padding: 15px 10px 40px 14px !important;
   padding-top:15px;
   background: #000000;
   overflow: hidden;
@@ -284,7 +284,6 @@ width: 300px;
 }
 
 .card-content h3 {
-  margin-top: 0;
   margin-bottom: 0px;
   color: #fafafa;
   font-size: 20px;
@@ -301,6 +300,8 @@ width: 300px;
   justify-content: space-between;
   align-items: center;
   padding-right: 5px;
+  margin: 10px;
+
 }
 
 .card-content p {

@@ -587,18 +587,18 @@
   }
 
   #titreaccroche h3 {
-  font-size: 0.95em;
+  font-size: 1.4em;
   text-align: left;
-  margin-bottom: 45px;
+  margin-bottom: 65px;
   margin-top: 0px;
   font-weight: 900;
-  text-align: justify;
+  text-align: left;
   text-wrap: wrap;
   max-width: 98%;
 }
     
 #questionstext p {
-  font-size: 1.25em;
+  font-size: 1.4em;
   text-align: left;
   margin-left: 0px;
   margin-bottom: 15px;
@@ -667,7 +667,7 @@ margin-bottom: 37px;
   justify-content: space-between;
   width: 95%;
   padding: 10px 0;
-margin-bottom: 15px;
+margin-bottom: 55px;
   font-weight: 500;
   font-size: 1em;
 
