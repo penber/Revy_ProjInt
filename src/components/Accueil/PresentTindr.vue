@@ -129,19 +129,20 @@ export default {
   }
 
   .tindrr-text  {
-   padding-left: 15px;
+   padding-left: 30px;
    max-width: 380px; /* Réduit la taille de la police pour les titres sur les petits écrans */
     align-items: start;
+    
   }
 
   .tindrr-text h2 {
-    font-size: 1.7em;  
+    font-size: 1.4em;  
     width:95%; 
   margin-bottom: 15px; }
 
   .tindrr-text p {
     font-size: 1.1em; 
-    width:90%; /* Réduit la taille de la police pour le texte sur les petits écrans */
+    width:95%; /* Réduit la taille de la police pour le texte sur les petits écrans */
   }
   .tindrr-img {
     margin-bottom: 30px;

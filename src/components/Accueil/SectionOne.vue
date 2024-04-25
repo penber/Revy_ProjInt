@@ -194,6 +194,8 @@ transform: scale(1.06);
     font-size: 2em;  /* Augmente la taille de la police pour une meilleure lisibilité sur tablette */
   }
 
+
+
   #Titre1, #Titre2 div {
     width: 70%;  /* Ajuste la largeur pour un affichage plus équilibré */
   }
@@ -221,5 +223,14 @@ transform: scale(1.06);
 }
 
 
+
+@media only screen and (min-width: 369px) and (max-width: 1024px) {
+  #reste {
+margin-top: 30px;  }
+  #Titre1, #Titre2 div {
+    padding: 10px; /* Augmente la taille de la police pour une meilleure lisibilité sur tablette */
+    margin-bottom: 20px;
+  }
+}
 
 </style>
