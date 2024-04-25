@@ -396,7 +396,7 @@ justify-content: space-around;
   font-size: 2.4rem;
   font-weight: 500;
   max-width: 85%;
-  margin-bottom: 1rem;
+  margin-bottom: 12px;
   margin-top:10px;
   align-items: left;
   
@@ -412,6 +412,7 @@ font-family: 'typotexte';
   font-weight: 200;
   align-items: left;
 justify-content: left ;
+margin-bottom: 32px;
   color: #666; /* Ajustez la couleur selon votre design */
 }
 
